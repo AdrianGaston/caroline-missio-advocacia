@@ -1,0 +1,189 @@
+import { useState } from "react";
+import { MessageCircle, Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
+import { useToast } from "@/hooks/use-toast";
+
+const Contact = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Campos obrigatórios",
+        description: "Por favor, preencha todos os campos obrigatórios.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Here you would typically send the form data to a backend
+    toast({
+      title: "Mensagem enviada!",
+      description: "Em breve entraremos em contato. Obrigada!",
+    });
+
+    // Reset form
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
+
+  const handleWhatsApp = () => {
+    window.open("https://wa.me/5511999999999?text=Olá, gostaria de agendar uma consulta", "_blank");
+  };
+
+  return (
+    <section id="contato" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            Entre em Contato
+          </h2>
+          <p className="text-foreground/80 max-w-2xl mx-auto">
+            Agende sua consulta e tire suas dúvidas. Estou à disposição para ajudá-lo.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="animate-slide-up">
+            <Card className="shadow-medium gradient-card mb-6">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold text-primary mb-6">
+                  Informações de Contato
+                </h3>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <Phone className="h-5 w-5 text-accent mt-1" />
+                    <div>
+                      <p className="font-medium">Telefone</p>
+                      <p className="text-foreground/70">(11) 99999-9999</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <Mail className="h-5 w-5 text-accent mt-1" />
+                    <div>
+                      <p className="font-medium">E-mail</p>
+                      <p className="text-foreground/70">contato@carolinemissio.adv.br</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <MapPin className="h-5 w-5 text-accent mt-1" />
+                    <div>
+                      <p className="font-medium">Endereço</p>
+                      <p className="text-foreground/70">Av. Paulista, 1000 - São Paulo, SP</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-border/50">
+                  <p className="font-medium mb-3">Redes Sociais</p>
+                  <div className="flex gap-3">
+                    <Button
+                      size="icon"
+                      variant="outline"
+                      className="hover:bg-accent hover:text-white transition-smooth"
+                      onClick={() => window.open("https://instagram.com", "_blank")}
+                    >
+                      <Instagram className="h-5 w-5" />
+                    </Button>
+                    <Button
+                      size="icon"
+                      variant="outline"
+                      className="hover:bg-accent hover:text-white transition-smooth"
+                      onClick={() => window.open("https://linkedin.com", "_blank")}
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </Button>
+                    <Button
+                      size="icon"
+                      variant="outline"
+                      className="hover:bg-accent hover:text-white transition-smooth"
+                      onClick={handleWhatsApp}
+                    >
+                      <MessageCircle className="h-5 w-5" />
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Button
+              size="lg"
+              onClick={handleWhatsApp}
+              className="w-full bg-accent hover:bg-accent/90 shadow-medium"
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Falar pelo WhatsApp
+            </Button>
+          </div>
+
+          <Card className="shadow-medium gradient-card animate-slide-up">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold text-primary mb-6">
+                Envie sua Mensagem
+              </h3>
+              
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <Input
+                    placeholder="Nome completo *"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Input
+                    type="email"
+                    placeholder="E-mail *"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Input
+                    placeholder="Telefone"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  />
+                </div>
+                
+                <div>
+                  <Textarea
+                    placeholder="Mensagem *"
+                    rows={5}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
+                  />
+                </div>
+                
+                <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+                  Enviar Mensagem
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
