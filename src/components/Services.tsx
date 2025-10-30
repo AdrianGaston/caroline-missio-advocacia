@@ -1,32 +1,37 @@
 import { Users, Briefcase, Home, FileText, Heart } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getTranslation } from "@/lib/translations";
 
 const Services = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language).services;
+
   const services = [
     {
       icon: FileText,
-      title: "Direito Civil",
-      description: "Contratos, indenizações, responsabilidade civil e questões patrimoniais.",
+      title: t.civil.title,
+      description: t.civil.description,
     },
     {
       icon: Briefcase,
-      title: "Direito Trabalhista",
-      description: "Rescisões, verbas trabalhistas, ações contra empregadores e acordos.",
+      title: t.labor.title,
+      description: t.labor.description,
     },
     {
       icon: Heart,
-      title: "Direito de Família",
-      description: "Divórcio, pensão alimentícia, guarda de filhos e partilha de bens.",
+      title: t.family.title,
+      description: t.family.description,
     },
     {
       icon: Users,
-      title: "Direito Contratual",
-      description: "Elaboração, revisão e negociação de contratos diversos.",
+      title: t.contractual.title,
+      description: t.contractual.description,
     },
     {
       icon: Home,
-      title: "Direito Previdenciário",
-      description: "Aposentadorias, benefícios do INSS e revisões de valores.",
+      title: t.social.title,
+      description: t.social.description,
     },
   ];
 
@@ -35,10 +40,10 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Áreas de Atuação
+            {t.title}
           </h2>
           <p className="text-foreground/80 max-w-2xl mx-auto">
-            Atendimento especializado nas principais áreas do direito, sempre com foco em soluções práticas e eficientes.
+            {t.subtitle}
           </p>
         </div>
 

@@ -1,8 +1,13 @@
 import { Award, BookOpen, Scale } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import draCarolinePhoto from "@/assets/dra-caroline.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getTranslation } from "@/lib/translations";
 
 const About = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language).about;
+
   return (
     <section id="sobre" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -17,30 +22,30 @@ const About = () => {
 
           <div className="animate-slide-up">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Sobre Dra. Caroline Missio
+              {t.title}
             </h2>
             <p className="text-foreground/80 mb-6 leading-relaxed">
-              Advogada com mais de 10 anos de experiência, especialista em Direito Civil, Trabalhista e de Família. Formada pela Universidade de São Paulo (USP), com pós-graduação em Direito Processual Civil e MBA em Gestão Jurídica.
+              {t.paragraph1}
             </p>
             <p className="text-foreground/80 mb-8 leading-relaxed">
-              Ao longo da carreira, tenho me dedicado a oferecer um atendimento personalizado e humanizado, buscando sempre as melhores soluções jurídicas para cada cliente. Minha atuação é pautada pela ética, transparência e compromisso com a justiça.
+              {t.paragraph2}
             </p>
 
             <div className="grid sm:grid-cols-3 gap-4">
               <Card className="p-4 text-center shadow-soft hover:shadow-medium transition-smooth">
                 <Award className="h-8 w-8 text-accent mx-auto mb-2" />
-                <h3 className="font-semibold text-sm">10+ Anos</h3>
-                <p className="text-xs text-muted-foreground">de Experiência</p>
+                <h3 className="font-semibold text-sm">{t.years}</h3>
+                <p className="text-xs text-muted-foreground">{t.experience}</p>
               </Card>
               <Card className="p-4 text-center shadow-soft hover:shadow-medium transition-smooth">
                 <BookOpen className="h-8 w-8 text-accent mx-auto mb-2" />
-                <h3 className="font-semibold text-sm">Especialização</h3>
-                <p className="text-xs text-muted-foreground">Pós-Graduada</p>
+                <h3 className="font-semibold text-sm">{t.specialization}</h3>
+                <p className="text-xs text-muted-foreground">{t.postgraduate}</p>
               </Card>
               <Card className="p-4 text-center shadow-soft hover:shadow-medium transition-smooth">
                 <Scale className="h-8 w-8 text-accent mx-auto mb-2" />
-                <h3 className="font-semibold text-sm">OAB Ativa</h3>
-                <p className="text-xs text-muted-foreground">Regularizada</p>
+                <h3 className="font-semibold text-sm">{t.oab}</h3>
+                <p className="text-xs text-muted-foreground">{t.regularized}</p>
               </Card>
             </div>
           </div>

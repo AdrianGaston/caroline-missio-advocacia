@@ -1,24 +1,29 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getTranslation } from "@/lib/translations";
 
 const Testimonials = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language).testimonials;
+
   const testimonials = [
     {
-      name: "Maria Silva",
-      role: "Cliente - Direito de Família",
-      content: "Profissional extremamente competente e empática. Me ajudou em um momento muito difícil do meu divórcio, sempre com atenção e dedicação. Recomendo de olhos fechados!",
+      name: t.client1.name,
+      role: t.client1.role,
+      content: t.client1.content,
       rating: 5,
     },
     {
-      name: "João Santos",
-      role: "Cliente - Direito Trabalhista",
-      content: "Excelente advogada! Conseguiu resolver meu caso trabalhista de forma rápida e eficiente. Sempre disponível para esclarecer dúvidas e muito profissional.",
+      name: t.client2.name,
+      role: t.client2.role,
+      content: t.client2.content,
       rating: 5,
     },
     {
-      name: "Ana Costa",
-      role: "Cliente - Direito Civil",
-      content: "Dra. Caroline é uma profissional exemplar. Me orientou perfeitamente em uma questão contratual complexa. Sua dedicação e conhecimento fizeram toda a diferença no resultado positivo.",
+      name: t.client3.name,
+      role: t.client3.role,
+      content: t.client3.content,
       rating: 5,
     },
   ];
@@ -28,10 +33,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            O que dizem meus clientes
+            {t.title}
           </h2>
           <p className="text-foreground/80 max-w-2xl mx-auto">
-            A satisfação dos meus clientes é a maior recompensa do meu trabalho.
+            {t.subtitle}
           </p>
         </div>
 

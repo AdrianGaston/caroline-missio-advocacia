@@ -1,9 +1,27 @@
 import { useState, useEffect } from "react";
 import { Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getTranslation } from "@/lib/translations";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language, setLanguage } = useLanguage();
+  const t = getTranslation(language).header;
+
+  const languages = [
+    { code: "pt" as const, name: "Português", flag: "🇧🇷" },
+    { code: "en" as const, name: "English", flag: "🇺🇸" },
+    { code: "es" as const, name: "Español", flag: "🇪🇸" },
+  ];
+
+  const currentLanguage = languages.find((lang) => lang.code === language);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,31 +69,52 @@ const Header = () => {
               onClick={() => scrollToSection("inicio")}
               className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth"
             >
-              Início
+              {t.home}
             </button>
             <button
               onClick={() => scrollToSection("sobre")}
               className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth"
             >
-              Sobre
+              {t.about}
             </button>
             <button
               onClick={() => scrollToSection("servicos")}
               className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth"
             >
-              Serviços
+              {t.services}
             </button>
             <button
               onClick={() => scrollToSection("depoimentos")}
               className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth"
             >
-              Depoimentos
+              {t.testimonials}
             </button>
+            
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="text-2xl hover:scale-110 transition-smooth focus:outline-none">
+                  {currentLanguage?.flag}
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48">
+                {languages.map((lang) => (
+                  <DropdownMenuItem
+                    key={lang.code}
+                    onClick={() => setLanguage(lang.code)}
+                    className="cursor-pointer flex items-center gap-2"
+                  >
+                    <span className="text-xl">{lang.flag}</span>
+                    <span>{lang.name}</span>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Button
               onClick={() => scrollToSection("contato")}
               className="bg-primary hover:bg-primary/90"
             >
-              Contato
+              {t.contact}
             </Button>
           </nav>
 
@@ -98,31 +137,46 @@ const Header = () => {
               onClick={() => scrollToSection("inicio")}
               className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth text-left"
             >
-              Início
+              {t.home}
             </button>
             <button
               onClick={() => scrollToSection("sobre")}
               className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth text-left"
             >
-              Sobre
+              {t.about}
             </button>
             <button
               onClick={() => scrollToSection("servicos")}
               className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth text-left"
             >
-              Serviços
+              {t.services}
             </button>
             <button
               onClick={() => scrollToSection("depoimentos")}
               className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth text-left"
             >
-              Depoimentos
+              {t.testimonials}
             </button>
+            
+            <div className="flex items-center gap-2 py-2">
+              {languages.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => setLanguage(lang.code)}
+                  className={`text-2xl hover:scale-110 transition-smooth ${
+                    language === lang.code ? "scale-110" : "opacity-60"
+                  }`}
+                >
+                  {lang.flag}
+                </button>
+              ))}
+            </div>
+            
             <Button
               onClick={() => scrollToSection("contato")}
               className="bg-primary hover:bg-primary/90 w-full"
             >
-              Contato
+              {t.contact}
             </Button>
           </nav>
         </div>

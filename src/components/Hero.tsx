@@ -1,9 +1,14 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getTranslation } from "@/lib/translations";
 
 const Hero = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language).hero;
+
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá, gostaria de agendar uma consulta", "_blank");
+    window.open(`https://wa.me/5511999999999?text=${encodeURIComponent(t.whatsappMessage)}`, "_blank");
   };
 
   return (
@@ -13,10 +18,10 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Defendendo seus direitos com ética e dedicação
+            {t.title}
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-            Advocacia especializada em Direito Civil, Trabalhista e de Família com atendimento humanizado e soluções jurídicas eficazes.
+            {t.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
@@ -25,7 +30,7 @@ const Hero = () => {
               className="bg-accent hover:bg-accent/90 text-white font-medium shadow-large"
             >
               <MessageCircle className="mr-2 h-5 w-5" />
-              Agende uma Consulta
+              {t.scheduleConsultation}
             </Button>
             <Button
               size="lg"
@@ -36,7 +41,7 @@ const Hero = () => {
               }}
               className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
             >
-              Conheça mais
+              {t.learnMore}
             </Button>
           </div>
         </div>

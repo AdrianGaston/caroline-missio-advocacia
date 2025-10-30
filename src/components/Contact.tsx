@@ -5,9 +5,15 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getTranslation } from "@/lib/translations";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { language } = useLanguage();
+  const t = getTranslation(language).contact;
+  const heroT = getTranslation(language).hero;
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,8 +27,8 @@ const Contact = () => {
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Campos obrigatórios",
-        description: "Por favor, preencha todos os campos obrigatórios.",
+        title: t.requiredFields,
+        description: t.fillRequired,
         variant: "destructive",
       });
       return;
@@ -30,8 +36,8 @@ const Contact = () => {
 
     // Here you would typically send the form data to a backend
     toast({
-      title: "Mensagem enviada!",
-      description: "Em breve entraremos em contato. Obrigada!",
+      title: t.messageSent,
+      description: t.messageSuccess,
     });
 
     // Reset form
@@ -39,7 +45,7 @@ const Contact = () => {
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5511999999999?text=Olá, gostaria de agendar uma consulta", "_blank");
+    window.open(`https://wa.me/5511999999999?text=${encodeURIComponent(heroT.whatsappMessage)}`, "_blank");
   };
 
   return (
@@ -47,10 +53,10 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Entre em Contato
+            {t.title}
           </h2>
           <p className="text-foreground/80 max-w-2xl mx-auto">
-            Agende sua consulta e tire suas dúvidas. Estou à disposição para ajudá-lo.
+            {t.subtitle}
           </p>
         </div>
 
@@ -59,14 +65,14 @@ const Contact = () => {
             <Card className="shadow-medium gradient-card mb-6">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-primary mb-6">
-                  Informações de Contato
+                  {t.contactInfo}
                 </h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <Phone className="h-5 w-5 text-accent mt-1" />
                     <div>
-                      <p className="font-medium">Telefone</p>
+                      <p className="font-medium">{t.phone}</p>
                       <p className="text-foreground/70">(11) 99999-9999</p>
                     </div>
                   </div>
@@ -74,7 +80,7 @@ const Contact = () => {
                   <div className="flex items-start gap-3">
                     <Mail className="h-5 w-5 text-accent mt-1" />
                     <div>
-                      <p className="font-medium">E-mail</p>
+                      <p className="font-medium">{t.email}</p>
                       <p className="text-foreground/70">contato@carolinemissio.adv.br</p>
                     </div>
                   </div>
@@ -82,14 +88,14 @@ const Contact = () => {
                   <div className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 text-accent mt-1" />
                     <div>
-                      <p className="font-medium">Endereço</p>
+                      <p className="font-medium">{t.address}</p>
                       <p className="text-foreground/70">Av. Paulista, 1000 - São Paulo, SP</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-border/50">
-                  <p className="font-medium mb-3">Redes Sociais</p>
+                  <p className="font-medium mb-3">{t.socialMedia}</p>
                   <div className="flex gap-3">
                     <Button
                       size="icon"
@@ -126,20 +132,20 @@ const Contact = () => {
               className="w-full bg-accent hover:bg-accent/90 shadow-medium"
             >
               <MessageCircle className="mr-2 h-5 w-5" />
-              Falar pelo WhatsApp
+              {t.talkWhatsApp}
             </Button>
           </div>
 
           <Card className="shadow-medium gradient-card animate-slide-up">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold text-primary mb-6">
-                Envie sua Mensagem
+                {t.sendMessage}
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Input
-                    placeholder="Nome completo *"
+                    placeholder={`${t.fullName} *`}
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
@@ -149,7 +155,7 @@ const Contact = () => {
                 <div>
                   <Input
                     type="email"
-                    placeholder="E-mail *"
+                    placeholder={`${t.email} *`}
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
@@ -158,7 +164,7 @@ const Contact = () => {
                 
                 <div>
                   <Input
-                    placeholder="Telefone"
+                    placeholder={t.phoneField}
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   />
@@ -166,7 +172,7 @@ const Contact = () => {
                 
                 <div>
                   <Textarea
-                    placeholder="Mensagem *"
+                    placeholder={`${t.message} *`}
                     rows={5}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -175,7 +181,7 @@ const Contact = () => {
                 </div>
                 
                 <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
-                  Enviar Mensagem
+                  {t.sendButton}
                 </Button>
               </form>
             </CardContent>
