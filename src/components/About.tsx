@@ -1,5 +1,6 @@
 import { Award, BookOpen, Scale } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import draCarolinePhoto from "@/assets/dra-caroline.jpg";
 
 const About = () => {
   return (
@@ -8,7 +9,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=988"
+              src={draCarolinePhoto}
               alt="Dra. Caroline Missio"
               className="rounded-lg shadow-large w-full h-[500px] object-cover"
             />
