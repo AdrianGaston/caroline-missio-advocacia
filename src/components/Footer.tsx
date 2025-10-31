@@ -1,4 +1,4 @@
-import { Scale } from "lucide-react";
+import logoIcon from "@/assets/logo-icon.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getTranslation } from "@/lib/translations";
 
@@ -12,9 +12,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Scale className="h-6 w-6" />
-              <span className="text-lg font-semibold">Dra. Caroline Missio</span>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logoIcon} alt="Caroline Missio Logo" className="h-8 w-8 object-contain" />
+              <span className="text-lg font-semibold font-playfair">Caroline Missio</span>
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
               {t.description}

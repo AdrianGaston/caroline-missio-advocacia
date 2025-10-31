@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoIcon from "@/assets/logo-icon.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -56,11 +56,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => scrollToSection("inicio")}
-            className="flex items-center gap-2 hover:opacity-80 transition-smooth"
+            className="flex items-center gap-3 hover:opacity-80 transition-smooth"
           >
-            <Scale className="h-8 w-8 text-primary" />
-            <span className="text-xl font-semibold text-primary">
-              Dra. Caroline Missio
+            <img src={logoIcon} alt="Caroline Missio Logo" className="h-10 w-10 object-contain" />
+            <span className="text-xl font-semibold text-primary font-playfair">
+              Caroline Missio
             </span>
           </button>
 
