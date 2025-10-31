@@ -24,27 +24,25 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">{t.contactTitle}</h3>
             <div className="space-y-2 text-sm text-white/80">
-              <p>{t.phone}: (11) 99999-9999</p>
-              <p>{t.email}: contato@carolinemissio.adv.br</p>
-              <p>{t.addressLabel}: Av. Paulista, 1000 - São Paulo, SP</p>
+              <p>{t.phone}: (48) 9 9158-0285</p>
+              <p>{t.email}: caroline25949@oab-sc.org.br</p>
             </div>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">{t.areasTitle}</h3>
             <ul className="space-y-2 text-sm text-white/80">
-              <li>{t.civilLaw}</li>
-              <li>{t.laborLaw}</li>
-              <li>{t.familyLaw}</li>
-              <li>{t.contractualLaw}</li>
+              <li>{t.migrationLaw}</li>
               <li>{t.socialLaw}</li>
+              <li>{t.consumerLaw}</li>
+              <li>{t.civilLaw}</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/20 pt-8 text-center text-sm text-white/80">
           <p>© {currentYear} Dra. Caroline Missio - {t.rights}</p>
-          <p className="mt-2">OAB/SP 123.456 | CRP 12345-6</p>
+          <p className="mt-2">OAB/SC 25949</p>
         </div>
       </div>
     </footer>

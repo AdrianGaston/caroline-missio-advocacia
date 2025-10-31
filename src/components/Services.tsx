@@ -1,4 +1,4 @@
-import { Users, Briefcase, Home, FileText, Heart } from "lucide-react";
+import { Plane, Home, ShoppingCart, FileText } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getTranslation } from "@/lib/translations";
@@ -9,29 +9,24 @@ const Services = () => {
 
   const services = [
     {
-      icon: FileText,
-      title: t.civil.title,
-      description: t.civil.description,
-    },
-    {
-      icon: Briefcase,
-      title: t.labor.title,
-      description: t.labor.description,
-    },
-    {
-      icon: Heart,
-      title: t.family.title,
-      description: t.family.description,
-    },
-    {
-      icon: Users,
-      title: t.contractual.title,
-      description: t.contractual.description,
+      icon: Plane,
+      title: t.migration.title,
+      description: t.migration.description,
     },
     {
       icon: Home,
       title: t.social.title,
       description: t.social.description,
+    },
+    {
+      icon: ShoppingCart,
+      title: t.consumer.title,
+      description: t.consumer.description,
+    },
+    {
+      icon: FileText,
+      title: t.civil.title,
+      description: t.civil.description,
     },
   ];
 
@@ -47,7 +42,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <Card
               key={index}

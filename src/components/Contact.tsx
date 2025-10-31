@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageCircle, Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
+import { MessageCircle, Mail, Phone, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -45,7 +45,7 @@ const Contact = () => {
   };
 
   const handleWhatsApp = () => {
-    window.open(`https://wa.me/5511999999999?text=${encodeURIComponent(heroT.whatsappMessage)}`, "_blank");
+    window.open(`https://wa.me/5548991580285?text=${encodeURIComponent(heroT.whatsappMessage)}`, "_blank");
   };
 
   return (
@@ -73,7 +73,7 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-accent mt-1" />
                     <div>
                       <p className="font-medium">{t.phone}</p>
-                      <p className="text-foreground/70">(11) 99999-9999</p>
+                      <p className="text-foreground/70">(48) 9 9158-0285</p>
                     </div>
                   </div>
                   
@@ -81,15 +81,7 @@ const Contact = () => {
                     <Mail className="h-5 w-5 text-accent mt-1" />
                     <div>
                       <p className="font-medium">{t.email}</p>
-                      <p className="text-foreground/70">contato@carolinemissio.adv.br</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 text-accent mt-1" />
-                    <div>
-                      <p className="font-medium">{t.address}</p>
-                      <p className="text-foreground/70">Av. Paulista, 1000 - São Paulo, SP</p>
+                      <p className="text-foreground/70">caroline25949@oab-sc.org.br</p>
                     </div>
                   </div>
                 </div>
@@ -101,7 +93,7 @@ const Contact = () => {
                       size="icon"
                       variant="outline"
                       className="hover:bg-accent hover:text-white transition-smooth"
-                      onClick={() => window.open("https://instagram.com", "_blank")}
+                      onClick={() => window.open("https://instagram.com/carolineadvogada.sc", "_blank")}
                     >
                       <Instagram className="h-5 w-5" />
                     </Button>
@@ -109,7 +101,7 @@ const Contact = () => {
                       size="icon"
                       variant="outline"
                       className="hover:bg-accent hover:text-white transition-smooth"
-                      onClick={() => window.open("https://linkedin.com", "_blank")}
+                      onClick={() => window.open("http://www.linkedin.com/in/caroline-missio", "_blank")}
                     >
                       <Linkedin className="h-5 w-5" />
                     </Button>

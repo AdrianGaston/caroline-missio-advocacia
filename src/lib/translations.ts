@@ -18,9 +18,9 @@ export const translations = {
     },
     about: {
       title: "Sobre Dra. Caroline Missio",
-      paragraph1: "Advogada com mais de 10 anos de experiência, especialista em Direito Civil, Trabalhista e de Família. Formada pela Universidade de São Paulo (USP), com pós-graduação em Direito Processual Civil e MBA em Gestão Jurídica.",
+      paragraph1: "Advogada com mais de 15 anos de experiência, especialista em Direito Migratório, Previdenciário, do Consumidor e Civil. Formada pela Universidade de São Paulo (USP), com pós-graduação em Direito Processual Civil e MBA em Gestão Jurídica.",
       paragraph2: "Ao longo da carreira, tenho me dedicado a oferecer um atendimento personalizado e humanizado, buscando sempre as melhores soluções jurídicas para cada cliente. Minha atuação é pautada pela ética, transparência e compromisso com a justiça.",
-      years: "10+ Anos",
+      years: "15+ Anos",
       experience: "de Experiência",
       specialization: "Especialização",
       postgraduate: "Pós-Graduada",
@@ -30,25 +30,21 @@ export const translations = {
     services: {
       title: "Áreas de Atuação",
       subtitle: "Atendimento especializado nas principais áreas do direito, sempre com foco em soluções práticas e eficientes.",
-      civil: {
-        title: "Direito Civil",
-        description: "Contratos, indenizações, responsabilidade civil e questões patrimoniais.",
-      },
-      labor: {
-        title: "Direito Trabalhista",
-        description: "Rescisões, verbas trabalhistas, ações contra empregadores e acordos.",
-      },
-      family: {
-        title: "Direito de Família",
-        description: "Divórcio, pensão alimentícia, guarda de filhos e partilha de bens.",
-      },
-      contractual: {
-        title: "Direito Contratual",
-        description: "Elaboração, revisão e negociação de contratos diversos.",
+      migration: {
+        title: "Direito Migratório",
+        description: "Vistos, naturalização, residência permanente e questões relacionadas à imigração.",
       },
       social: {
         title: "Direito Previdenciário",
         description: "Aposentadorias, benefícios do INSS e revisões de valores.",
+      },
+      consumer: {
+        title: "Direito do Consumidor",
+        description: "Defesa dos direitos do consumidor, problemas com produtos e serviços.",
+      },
+      civil: {
+        title: "Direito Civil",
+        description: "Contratos, indenizações, responsabilidade civil e questões patrimoniais.",
       },
     },
     testimonials: {
@@ -90,17 +86,15 @@ export const translations = {
       messageSuccess: "Em breve entraremos em contato. Obrigada!",
     },
     footer: {
-      description: "Advocacia especializada em Direito Civil, Trabalhista e de Família com atendimento humanizado e soluções jurídicas eficazes.",
+      description: "Advocacia especializada em Direito Migratório, Previdenciário, do Consumidor e Civil com atendimento humanizado e soluções jurídicas eficazes.",
       contactTitle: "Contato",
       phone: "Telefone",
       email: "E-mail",
-      addressLabel: "Endereço",
       areasTitle: "Áreas de Atuação",
-      civilLaw: "Direito Civil",
-      laborLaw: "Direito Trabalhista",
-      familyLaw: "Direito de Família",
-      contractualLaw: "Direito Contratual",
+      migrationLaw: "Direito Migratório",
       socialLaw: "Direito Previdenciário",
+      consumerLaw: "Direito do Consumidor",
+      civilLaw: "Direito Civil",
       rights: "Todos os direitos reservados",
     },
   },
@@ -114,16 +108,16 @@ export const translations = {
     },
     hero: {
       title: "Defending your rights with ethics and dedication",
-      subtitle: "Specialized legal practice in Civil, Labor, and Family Law with humanized service and effective legal solutions.",
+      subtitle: "Specialized legal practice in Migration, Social Security, Consumer, and Civil Law with humanized service and effective legal solutions.",
       scheduleConsultation: "Schedule a Consultation",
       learnMore: "Learn More",
       whatsappMessage: "Hello, I would like to schedule a consultation",
     },
     about: {
       title: "About Dr. Caroline Missio",
-      paragraph1: "Attorney with over 10 years of experience, specialist in Civil, Labor, and Family Law. Graduated from the University of São Paulo (USP), with postgraduate degree in Civil Procedural Law and MBA in Legal Management.",
+      paragraph1: "Attorney with over 15 years of experience, specialist in Migration, Social Security, Consumer, and Civil Law. Graduated from the University of São Paulo (USP), with postgraduate degree in Civil Procedural Law and MBA in Legal Management.",
       paragraph2: "Throughout my career, I have dedicated myself to providing personalized and humanized service, always seeking the best legal solutions for each client. My practice is guided by ethics, transparency, and commitment to justice.",
-      years: "10+ Years",
+      years: "15+ Years",
       experience: "of Experience",
       specialization: "Specialization",
       postgraduate: "Postgraduate",
@@ -133,25 +127,21 @@ export const translations = {
     services: {
       title: "Practice Areas",
       subtitle: "Specialized service in the main areas of law, always focused on practical and efficient solutions.",
-      civil: {
-        title: "Civil Law",
-        description: "Contracts, indemnities, civil liability, and property matters.",
-      },
-      labor: {
-        title: "Labor Law",
-        description: "Terminations, labor claims, lawsuits against employers, and agreements.",
-      },
-      family: {
-        title: "Family Law",
-        description: "Divorce, alimony, child custody, and property division.",
-      },
-      contractual: {
-        title: "Contract Law",
-        description: "Drafting, review, and negotiation of various contracts.",
+      migration: {
+        title: "Migration Law",
+        description: "Visas, naturalization, permanent residence, and immigration-related matters.",
       },
       social: {
         title: "Social Security Law",
         description: "Retirements, social security benefits, and value reviews.",
+      },
+      consumer: {
+        title: "Consumer Law",
+        description: "Consumer rights protection, product and service issues.",
+      },
+      civil: {
+        title: "Civil Law",
+        description: "Contracts, indemnities, civil liability, and property matters.",
       },
     },
     testimonials: {
@@ -193,17 +183,15 @@ export const translations = {
       messageSuccess: "We will contact you soon. Thank you!",
     },
     footer: {
-      description: "Specialized legal practice in Civil, Labor, and Family Law with humanized service and effective legal solutions.",
+      description: "Specialized legal practice in Migration, Social Security, Consumer, and Civil Law with humanized service and effective legal solutions.",
       contactTitle: "Contact",
       phone: "Phone",
       email: "Email",
-      addressLabel: "Address",
       areasTitle: "Practice Areas",
-      civilLaw: "Civil Law",
-      laborLaw: "Labor Law",
-      familyLaw: "Family Law",
-      contractualLaw: "Contract Law",
+      migrationLaw: "Migration Law",
       socialLaw: "Social Security Law",
+      consumerLaw: "Consumer Law",
+      civilLaw: "Civil Law",
       rights: "All rights reserved",
     },
   },
@@ -217,16 +205,16 @@ export const translations = {
     },
     hero: {
       title: "Defendiendo sus derechos con ética y dedicación",
-      subtitle: "Práctica legal especializada en Derecho Civil, Laboral y de Familia con servicio humanizado y soluciones jurídicas efectivas.",
+      subtitle: "Práctica legal especializada en Derecho Migratorio, de Seguridad Social, del Consumidor y Civil con servicio humanizado y soluciones jurídicas efectivas.",
       scheduleConsultation: "Agendar una Consulta",
       learnMore: "Conocer más",
       whatsappMessage: "Hola, me gustaría agendar una consulta",
     },
     about: {
       title: "Sobre Dra. Caroline Missio",
-      paragraph1: "Abogada con más de 10 años de experiencia, especialista en Derecho Civil, Laboral y de Familia. Graduada de la Universidad de São Paulo (USP), con posgrado en Derecho Procesal Civil y MBA en Gestión Jurídica.",
+      paragraph1: "Abogada con más de 15 años de experiencia, especialista en Derecho Migratorio, de Seguridad Social, del Consumidor y Civil. Graduada de la Universidad de São Paulo (USP), con posgrado en Derecho Procesal Civil y MBA en Gestión Jurídica.",
       paragraph2: "A lo largo de mi carrera, me he dedicado a ofrecer un servicio personalizado y humanizado, buscando siempre las mejores soluciones jurídicas para cada cliente. Mi actuación se basa en la ética, transparencia y compromiso con la justicia.",
-      years: "10+ Años",
+      years: "15+ Años",
       experience: "de Experiencia",
       specialization: "Especialización",
       postgraduate: "Posgrado",
@@ -236,25 +224,21 @@ export const translations = {
     services: {
       title: "Áreas de Actuación",
       subtitle: "Servicio especializado en las principales áreas del derecho, siempre enfocado en soluciones prácticas y eficientes.",
-      civil: {
-        title: "Derecho Civil",
-        description: "Contratos, indemnizaciones, responsabilidad civil y cuestiones patrimoniales.",
-      },
-      labor: {
-        title: "Derecho Laboral",
-        description: "Rescisiones, prestaciones laborales, acciones contra empleadores y acuerdos.",
-      },
-      family: {
-        title: "Derecho de Familia",
-        description: "Divorcio, pensión alimenticia, custodia de hijos y división de bienes.",
-      },
-      contractual: {
-        title: "Derecho Contractual",
-        description: "Elaboración, revisión y negociación de diversos contratos.",
+      migration: {
+        title: "Derecho Migratorio",
+        description: "Visas, naturalización, residencia permanente y cuestiones relacionadas con inmigración.",
       },
       social: {
         title: "Derecho de Seguridad Social",
         description: "Jubilaciones, beneficios de seguridad social y revisiones de valores.",
+      },
+      consumer: {
+        title: "Derecho del Consumidor",
+        description: "Protección de los derechos del consumidor, problemas con productos y servicios.",
+      },
+      civil: {
+        title: "Derecho Civil",
+        description: "Contratos, indemnizaciones, responsabilidad civil y cuestiones patrimoniales.",
       },
     },
     testimonials: {
@@ -296,17 +280,15 @@ export const translations = {
       messageSuccess: "Pronto nos pondremos en contacto. ¡Gracias!",
     },
     footer: {
-      description: "Práctica legal especializada en Derecho Civil, Laboral y de Familia con servicio humanizado y soluciones jurídicas efectivas.",
+      description: "Práctica legal especializada en Derecho Migratorio, de Seguridad Social, del Consumidor y Civil con servicio humanizado y soluciones jurídicas efectivas.",
       contactTitle: "Contacto",
       phone: "Teléfono",
       email: "Correo electrónico",
-      addressLabel: "Dirección",
       areasTitle: "Áreas de Actuación",
-      civilLaw: "Derecho Civil",
-      laborLaw: "Derecho Laboral",
-      familyLaw: "Derecho de Familia",
-      contractualLaw: "Derecho Contractual",
+      migrationLaw: "Derecho Migratorio",
       socialLaw: "Derecho de Seguridad Social",
+      consumerLaw: "Derecho del Consumidor",
+      civilLaw: "Derecho Civil",
       rights: "Todos los derechos reservados",
     },
   },
