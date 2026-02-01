@@ -26,6 +26,12 @@ const Testimonials = () => {
       content: t.client3.content,
       rating: 5,
     },
+    {
+      name: t.client4.name,
+      role: t.client4.role,
+      content: t.client4.content,
+      rating: 5,
+    },
   ];
 
   return (
@@ -40,7 +46,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
