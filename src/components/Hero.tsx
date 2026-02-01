@@ -9,7 +9,7 @@ const Hero = () => {
   const t = getTranslation(language).hero;
 
   const handleWhatsApp = () => {
-    window.open(`https://wa.me/5511999999999?text=${encodeURIComponent(t.whatsappMessage)}`, "_blank");
+    window.open(`https://wa.me/5548991580285?text=${encodeURIComponent(t.whatsappMessage)}`, "_blank");
   };
 
   return (

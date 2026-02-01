@@ -69,21 +69,27 @@ const Contact = () => {
                 </h3>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-3">
+                  <a 
+                    href="tel:+5548991580285" 
+                    className="flex items-start gap-3 hover:opacity-80 transition-opacity cursor-pointer"
+                  >
                     <Phone className="h-5 w-5 text-accent mt-1" />
                     <div>
                       <p className="font-medium">{t.phone}</p>
                       <p className="text-foreground/70">(48) 9 9158-0285</p>
                     </div>
-                  </div>
+                  </a>
                   
-                  <div className="flex items-start gap-3">
+                  <a 
+                    href="mailto:caroline25949@oab-sc.org.br" 
+                    className="flex items-start gap-3 hover:opacity-80 transition-opacity cursor-pointer"
+                  >
                     <Mail className="h-5 w-5 text-accent mt-1" />
                     <div>
                       <p className="font-medium">{t.email}</p>
                       <p className="text-foreground/70">caroline25949@oab-sc.org.br</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-border/50">
@@ -93,7 +99,7 @@ const Contact = () => {
                       size="icon"
                       variant="outline"
                       className="hover:bg-accent hover:text-white transition-smooth"
-                      onClick={() => window.open("https://instagram.com/carolineadvogada.sc", "_blank")}
+                      onClick={() => window.open("https://www.instagram.com/carolineadvogada.sc/", "_blank")}
                     >
                       <Instagram className="h-5 w-5" />
                     </Button>
@@ -101,7 +107,7 @@ const Contact = () => {
                       size="icon"
                       variant="outline"
                       className="hover:bg-accent hover:text-white transition-smooth"
-                      onClick={() => window.open("http://www.linkedin.com/in/caroline-missio", "_blank")}
+                      onClick={() => window.open("https://www.linkedin.com/in/caroline-missio/", "_blank")}
                     >
                       <Linkedin className="h-5 w-5" />
                     </Button>
