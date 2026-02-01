@@ -2,6 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getTranslation } from "@/lib/translations";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   const { language } = useLanguage();
@@ -13,7 +14,10 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center gradient-hero">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070')] bg-cover bg-center opacity-10"></div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      ></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl animate-fade-in">
