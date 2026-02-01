@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center gradient-hero">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
+        className="absolute inset-0 bg-cover bg-no-repeat opacity-15 bg-right md:bg-[center_right_10%] lg:bg-[center_right_20%]"
         style={{ backgroundImage: `url(${heroBackground})` }}
       ></div>
       
