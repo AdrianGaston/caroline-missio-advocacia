@@ -15,7 +15,8 @@ export default {
     extend: {
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
-        sans: ["Poppins", "sans-serif"],
+        sans: ["Montserrat", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
