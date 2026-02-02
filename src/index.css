@@ -129,8 +129,8 @@ All colors MUST be HSL.
     font-family: 'Playfair Display', serif;
   }
   
-  p, span, button, a, input, textarea, select {
-    font-family: 'Poppins', sans-serif;
+  p, span, button, a, input, textarea, select, label, li {
+    font-family: 'Montserrat', sans-serif;
   }
   
   html {

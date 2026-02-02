@@ -61,7 +61,11 @@ const Header = () => {
             onClick={() => scrollToSection("inicio")}
             className="flex items-center gap-3 hover:opacity-80 transition-smooth"
           >
-            <LogoIcon className="h-10 w-10 transition-all duration-500" color={logoColor} />
+            <LogoIcon 
+              className={`h-10 w-10 transition-all duration-500 ${
+                isScrolled ? "brightness-50 saturate-150" : ""
+              }`} 
+            />
             <span 
               className="text-xl font-semibold font-playfair transition-all duration-500"
               style={{ color: logoColor }}
