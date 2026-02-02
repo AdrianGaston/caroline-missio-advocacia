@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import logoIcon from "@/assets/logo-icon.png";
+import LogoIcon from "@/components/LogoIcon";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -44,6 +44,9 @@ const Header = () => {
     }
   };
 
+  // Logo and text color based on scroll state
+  const logoColor = isScrolled ? "#29445B" : "#d2bfb1";
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
@@ -58,8 +61,11 @@ const Header = () => {
             onClick={() => scrollToSection("inicio")}
             className="flex items-center gap-3 hover:opacity-80 transition-smooth"
           >
-            <img src={logoIcon} alt="Caroline Missio Logo" className="h-10 w-10 object-contain" />
-            <span className="text-xl font-semibold text-primary font-playfair">
+            <LogoIcon className="h-10 w-10 transition-all duration-500" color={logoColor} />
+            <span 
+              className="text-xl font-semibold font-playfair transition-all duration-500"
+              style={{ color: logoColor }}
+            >
               Caroline Missio
             </span>
           </button>

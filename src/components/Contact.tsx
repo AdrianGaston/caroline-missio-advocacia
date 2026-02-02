@@ -61,8 +61,9 @@ const Contact = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="animate-slide-up">
-            <Card className="shadow-medium gradient-card mb-6">
+          <div className="animate-slide-up space-y-6">
+            {/* Contact Section */}
+            <Card className="shadow-medium gradient-card">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-primary mb-6">
                   {t.contactInfo}
@@ -81,6 +82,19 @@ const Contact = () => {
                   </a>
                   
                   <a 
+                    href={`https://wa.me/5548991580285?text=${encodeURIComponent(heroT.whatsappMessage)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-3 hover:opacity-80 transition-opacity cursor-pointer"
+                  >
+                    <MessageCircle className="h-5 w-5 text-accent mt-1" />
+                    <div>
+                      <p className="font-medium">WhatsApp</p>
+                      <p className="text-foreground/70">(48) 9 9158-0285</p>
+                    </div>
+                  </a>
+                  
+                  <a 
                     href="mailto:caroline25949@oab-sc.org.br" 
                     className="flex items-start gap-3 hover:opacity-80 transition-opacity cursor-pointer"
                   >
@@ -91,47 +105,37 @@ const Contact = () => {
                     </div>
                   </a>
                 </div>
-
-                <div className="mt-6 pt-6 border-t border-border/50">
-                  <p className="font-medium mb-3">{t.socialMedia}</p>
-                  <div className="flex gap-3">
-                    <Button
-                      size="icon"
-                      variant="outline"
-                      className="hover:bg-accent hover:text-white transition-smooth"
-                      onClick={() => window.open("https://www.instagram.com/carolineadvogada.sc/", "_blank")}
-                    >
-                      <Instagram className="h-5 w-5" />
-                    </Button>
-                    <Button
-                      size="icon"
-                      variant="outline"
-                      className="hover:bg-accent hover:text-white transition-smooth"
-                      onClick={() => window.open("https://www.linkedin.com/in/caroline-missio/", "_blank")}
-                    >
-                      <Linkedin className="h-5 w-5" />
-                    </Button>
-                    <Button
-                      size="icon"
-                      variant="outline"
-                      className="hover:bg-accent hover:text-white transition-smooth"
-                      onClick={handleWhatsApp}
-                    >
-                      <MessageCircle className="h-5 w-5" />
-                    </Button>
-                  </div>
-                </div>
               </CardContent>
             </Card>
 
-            <Button
-              size="lg"
-              onClick={handleWhatsApp}
-              className="w-full bg-accent hover:bg-accent/90 shadow-medium"
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              {t.talkWhatsApp}
-            </Button>
+            {/* Social Media Section - Separate */}
+            <Card className="shadow-medium gradient-card">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold text-primary mb-4">
+                  {t.socialMedia}
+                </h3>
+                <div className="flex gap-3">
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    className="hover:bg-accent hover:text-white transition-smooth"
+                    onClick={() => window.open("https://www.instagram.com/carolineadvogada.sc/", "_blank")}
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </Button>
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    className="hover:bg-accent hover:text-white transition-smooth"
+                    onClick={() => window.open("https://www.linkedin.com/in/caroline-missio/", "_blank")}
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           <Card className="shadow-medium gradient-card animate-slide-up">
