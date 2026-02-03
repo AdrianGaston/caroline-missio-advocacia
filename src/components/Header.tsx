@@ -63,7 +63,9 @@ const Header = () => {
           >
             <LogoIcon 
               className={`h-10 w-10 transition-all duration-500 ${
-                isScrolled ? "brightness-50 saturate-150" : ""
+                isScrolled 
+                  ? "brightness-[0.3] sepia-[0.5] saturate-[2] hue-rotate-[180deg]" 
+                  : ""
               }`} 
             />
             <span 
