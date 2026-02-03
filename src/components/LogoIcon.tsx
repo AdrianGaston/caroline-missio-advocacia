@@ -1,4 +1,4 @@
-import logoBlue from "@/assets/logo-blue.svg";
+import logoNew from "@/assets/logo-new.png";
 
 interface LogoIconProps {
   className?: string;
@@ -8,7 +8,7 @@ interface LogoIconProps {
 const LogoIcon = ({ className = "h-10 w-10" }: LogoIconProps) => {
   return (
     <img
-      src={logoBlue}
+      src={logoNew}
       alt="Caroline Missio Logo"
       className={className}
     />
