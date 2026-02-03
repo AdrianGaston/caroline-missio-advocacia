@@ -219,15 +219,15 @@ export const translations = {
     },
     hero: {
       title: "Defendiendo sus derechos con ética y dedicación",
-      subtitle: "Práctica legal especializada en Derecho Migratorio, Derecho de Seguridad Social, Proceso Civil y Derecho del Consumidor, con servicio humanizado y soluciones jurídicas efectivas.",
+      subtitle: "Despacho de abogacía especializado en Derecho Migratorio, Derecho de la Seguridad Social, Derecho Procesal Civil y Derecho del Consumidor, con atención humanizada y soluciones jurídicas eficaces.",
       scheduleConsultation: "Agendar una Consulta",
       learnMore: "Conocer más",
       whatsappMessage: "Hola, me gustaría agendar una consulta",
     },
     about: {
       title: "Sobre mí",
-      paragraph1: "Abogada inscrita en la OAB/SC bajo el nº 25.949, con más de 15 años de experiencia en la abogacía. Posgraduada en Derecho Migratorio, actúo de forma especializada ayudando a extranjeros en procesos de residencia, naturalización, visados y regularización migratoria en Brasil, además de brasileños que necesiten orientación jurídica en Brasil y en el exterior.",
-      paragraph2: "Poseo también especializaciones en Proceso Civil y Derecho de Seguridad Social, con amplia experiencia en consultoría jurídica y en el seguimiento de procesos administrativos y judiciales. Mi trabajo está guiado por la ética, por la atención personalizada y por la búsqueda de soluciones jurídicas seguras y humanizadas, ofreciendo un servicio accesible a personas de diferentes nacionalidades, con valorización del diálogo intercultural y del respeto a los derechos humanos.",
+      paragraph1: "Abogada registrada en el Colegio de Abogados de Santa Catarina (OAB/SC) bajo el número 25.949, con más de 15 años de experiencia en el ejercicio de la abogacía. Posgraduada en Derecho Migratorio, actúo de manera especializada asistiendo a extranjeros en procesos de residencia, naturalización, visas y regularización migratoria en Brasil, así como a brasileños que requieren orientación y asesoramiento jurídico tanto en Brasil como en el exterior.",
+      paragraph2: "Cuento además con especializaciones en Derecho Procesal Civil y Derecho de la Seguridad Social, con amplia experiencia en consultoría jurídica y en el seguimiento de procesos administrativos y judiciales. Mi trabajo está guiado por la ética, la atención personalizada y la búsqueda de soluciones jurídicas seguras y humanizadas, ofreciendo un servicio accesible a personas de diferentes nacionalidades, promoviendo el diálogo intercultural.",
       years: "15+ Años",
       experience: "de Experiencia",
       specialization: "Especialización",
@@ -240,11 +240,11 @@ export const translations = {
       subtitle: "Asistencia jurídica especializada, con enfoque en soluciones prácticas, seguras y eficientes.",
       migration: {
         title: "Derecho Migratorio",
-        description: "Visados, residencia (temporal y permanente), naturalización, regularización migratoria, inmigración y emigración",
+        description: "Visas, residencia (temporal y permanente), naturalización, regularización migratoria, inmigración y emigración.",
       },
       social: {
-        title: "Derecho de Seguridad Social",
-        description: "Jubilaciones, beneficios del INSS y seguridad social internacional",
+        title: "Derecho de la Seguridad Social",
+        description: "Jubilación, pensiones y seguridad social internacional, entre otros beneficios.",
       },
       consumer: {
         title: "Derecho del Consumidor",
@@ -280,7 +280,7 @@ export const translations = {
       },
     },
     contact: {
-      title: "Póngase en Contacto",
+      title: "Contacto",
       subtitle: "Agende su consulta y aclare sus dudas. Estoy a su disposición para ayudarle.",
       contactInfo: "Información de Contacto",
       phone: "Teléfono",

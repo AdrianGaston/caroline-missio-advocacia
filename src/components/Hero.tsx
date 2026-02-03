@@ -43,7 +43,7 @@ const Hero = () => {
                 const element = document.getElementById("sobre");
                 element?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+              className="border-white/30 text-[#d2bfb1] hover:bg-white/10 backdrop-blur-sm"
             >
               {t.learnMore}
             </Button>
