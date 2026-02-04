@@ -62,7 +62,7 @@ const Header = () => {
             className="flex items-center gap-3 hover:opacity-80 transition-smooth"
           >
             <LogoIcon 
-              className={`h-12 w-12 transition-all duration-500 ${
+              className={`h-14 w-14 transition-all duration-500 ${
                 isScrolled 
                   ? "brightness-[0.3] sepia-[0.5] saturate-[2] hue-rotate-[180deg]" 
                   : ""
@@ -79,25 +79,33 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("inicio")}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth"
+              className={`text-sm font-medium transition-all duration-500 hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
             >
               {t.home}
             </button>
             <button
               onClick={() => scrollToSection("sobre")}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth"
+              className={`text-sm font-medium transition-all duration-500 hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
             >
               {t.about}
             </button>
             <button
               onClick={() => scrollToSection("servicos")}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth"
+              className={`text-sm font-medium transition-all duration-500 hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
             >
               {t.services}
             </button>
             <button
               onClick={() => scrollToSection("depoimentos")}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth"
+              className={`text-sm font-medium transition-all duration-500 hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
             >
               {t.testimonials}
             </button>
