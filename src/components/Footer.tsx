@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <LogoIcon className="h-10 w-10" color="#d2bfb1" />
+              <LogoIcon className="h-12 w-12" color="#d2bfb1" />
               <div>
                 <span className="text-lg font-semibold font-playfair block">{t.name}</span>
                 <span className="text-sm text-white/80">{t.role}</span>
