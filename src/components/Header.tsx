@@ -62,7 +62,7 @@ const Header = () => {
             className="flex items-center gap-3 hover:opacity-80 transition-smooth"
           >
             <LogoIcon 
-              className={`h-10 w-10 transition-all duration-500 ${
+              className={`h-12 w-12 transition-all duration-500 ${
                 isScrolled 
                   ? "brightness-[0.3] sepia-[0.5] saturate-[2] hue-rotate-[180deg]" 
                   : ""
