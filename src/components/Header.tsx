@@ -147,9 +147,9 @@ const Header = () => {
               nav?.classList.toggle("hidden");
             }}
           >
-            <div className="w-6 h-0.5 bg-primary mb-1"></div>
-            <div className="w-6 h-0.5 bg-primary mb-1"></div>
-            <div className="w-6 h-0.5 bg-primary"></div>
+            <div className={`w-6 h-0.5 mb-1 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
+            <div className={`w-6 h-0.5 mb-1 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
+            <div className={`w-6 h-0.5 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
           </button>
         </div>
 
@@ -157,25 +157,33 @@ const Header = () => {
           <nav className="flex flex-col gap-4">
             <button
               onClick={() => scrollToSection("inicio")}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth text-left"
+              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
             >
               {t.home}
             </button>
             <button
               onClick={() => scrollToSection("sobre")}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth text-left"
+              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
             >
               {t.about}
             </button>
             <button
               onClick={() => scrollToSection("servicos")}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth text-left"
+              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
             >
               {t.services}
             </button>
             <button
               onClick={() => scrollToSection("depoimentos")}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth text-left"
+              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
             >
               {t.testimonials}
             </button>
