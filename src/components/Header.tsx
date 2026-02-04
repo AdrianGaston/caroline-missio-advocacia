@@ -112,7 +112,9 @@ const Header = () => {
             
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className="text-2xl hover:scale-110 transition-smooth focus:outline-none">
+                <button className={`text-2xl transition-all duration-500 hover:scale-110 focus:outline-none ${
+                  isScrolled ? "opacity-100" : "drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]"
+                }`}>
                   {currentLanguage?.flag}
                 </button>
               </DropdownMenuTrigger>
