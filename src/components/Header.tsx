@@ -69,7 +69,7 @@ const Header = () => {
               }`} 
             />
             <span 
-              className="text-xl font-semibold font-playfair transition-all duration-500"
+              className="text-xl md:text-2xl font-semibold font-playfair transition-all duration-500"
               style={{ color: logoColor }}
             >
               Caroline Missio
