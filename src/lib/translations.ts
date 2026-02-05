@@ -114,16 +114,16 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      title: "Protecting your rights with ethics and dedication",
-      subtitle: "Law practice specialized in Immigration Law, providing human-centered legal services and effective legal solutions, with additional expertise in Social Security Law, Civil Procedure, and Consumer Law.",
+      title: "Protecting your rights in Brazil with ethics and dedication",
+      subtitle: "A law practice specializing in Brazilian Immigration Law, offering human-centered legal services and effective solutions for individuals and families, with additional expertise in Social Security Law, Civil Procedure, and Consumer Law.",
       scheduleConsultation: "Schedule a Consultation",
       learnMore: "Learn More",
       whatsappMessage: "Hello, I would like to schedule a consultation",
     },
     about: {
-      title: "About me",
-      paragraph1: "Attorney registered with OAB/SC under No. 25,949, with over 15 years of legal experience. I hold a postgraduate degree in Migration Law and specialize in assisting foreign nationals with residence permits, naturalization, visas, and immigration regularization in Brazil, as well as Brazilians seeking legal guidance in Brazil and abroad.",
-      paragraph2: "I also have specializations in Civil Procedure and Social Security Law, with extensive experience in legal consulting and in handling administrative and judicial proceedings. My work is guided by ethics, personalized service, and the pursuit of reliable and human-centered legal solutions, providing accessible legal assistance to individuals of different nationalities, while valuing intercultural dialogue and respect for human rights.",
+      title: "About Me",
+      paragraph1: "Attorney registered with OAB/SC under No. 25.949, with over 15 years of legal experience. I hold a postgraduate degree in Migration Law and specialize in assisting foreign nationals with visas, residence permits, naturalization, and immigration regularization in Brazil. I also assist Brazilians seeking legal guidance in Brazil and abroad. I provide legal representation throughout every stage of the immigration process, from initial planning to final approval.",
+      paragraph2: "I specialize in Civil Procedure and Social Security Law, with extensive experience in legal consulting and in conducting administrative and judicial proceedings. My work is guided by ethics, personalized service, and the pursuit of reliable, human-centered legal solutions. I am committed to providing accessible legal assistance to individuals of different nationalities, while valuing intercultural dialogue and respect for human rights.",
       years: "15+ Years",
       experience: "of Experience",
       specialization: "Specialization",
@@ -148,7 +148,7 @@ export const translations = {
       },
       civil: {
         title: "Civil Law and Civil Procedure",
-        description: "Contracts, indemnification claims, civil liability, and strategic legal representation in administrative and judicial proceedings.",
+        description: "Contracts, compensation claims, civil liability, and strategic legal representation in administrative and judicial proceedings.",
       },
     },
     testimonials: {
@@ -167,17 +167,17 @@ export const translations = {
       client3: {
         name: "Milourde",
         role: "",
-        content: "You are a very special person, your help was very fundamental to me.",
+        content: "You are a very special person; your help was essential to me.",
       },
       client4: {
         name: "Estily",
         role: "",
-        content: "Dr. Caroline helped me bring my family to Brazil, I am very grateful to her, always very attentive, values anyone who needs help.",
+        content: "Dr. Caroline helped me bring my family to Brazil. I am very grateful to her, she is always very attentive and values everyone who needs help.",
       },
     },
     contact: {
       title: "Get in Touch",
-      subtitle: "Schedule your consultation and clear your doubts. I am available to help you.",
+      subtitle: "Schedule your consultation and clarify your questions. I am available to help you.",
       contactInfo: "Contact Information",
       phone: "Phone",
       email: "Email",
@@ -197,7 +197,7 @@ export const translations = {
     footer: {
       name: "Caroline Missio",
       role: "Attorney | OAB/SC 25.949",
-      description: "Law practice specialized in Immigration Law, Social Security Law, Civil Procedure, and Consumer Law, based in Santa Catarina and providing legal services throughout Brazil.",
+      description: "Law practice specializing in Immigration Law, Social Security Law, Civil Procedure, and Consumer Law, based in Santa Catarina and providing legal services throughout Brazil.",
       contactTitle: "Contact",
       phone: "Phone",
       email: "Email",
