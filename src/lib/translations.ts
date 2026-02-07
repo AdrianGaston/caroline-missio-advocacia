@@ -103,6 +103,7 @@ export const translations = {
       consumerLaw: "Direito do Consumidor",
       civilLaw: "Direito Civil e Processo Civil",
       rights: "Todos os direitos reservados",
+      developedBy: "Desenvolvido por",
     },
   },
   en: {
@@ -207,6 +208,7 @@ export const translations = {
       consumerLaw: "Consumer Law",
       civilLaw: "Civil Law and Civil Procedure",
       rights: "All rights reserved",
+      developedBy: "Developed by",
     },
   },
   es: {
@@ -311,6 +313,7 @@ export const translations = {
       consumerLaw: "Derecho del Consumidor",
       civilLaw: "Derecho Civil y Proceso Civil",
       rights: "Todos los derechos reservados",
+      developedBy: "Desarrollado por",
     },
   },
 };

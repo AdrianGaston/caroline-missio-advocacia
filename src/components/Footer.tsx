@@ -46,6 +46,7 @@ const Footer = () => {
         <div className="border-t border-white/20 pt-8 text-center text-sm text-white/80">
           <p>© {currentYear} Dra. Caroline Missio - {t.rights}</p>
           <p className="mt-2">OAB/SC 25949</p>
+          <p className="mt-4 text-xs text-white/50">{t.developedBy} Adrián Lumbía</p>
         </div>
       </div>
     </footer>
