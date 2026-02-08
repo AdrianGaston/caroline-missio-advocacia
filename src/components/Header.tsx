@@ -12,7 +12,6 @@ import { getTranslation } from "@/lib/translations";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
   const t = getTranslation(language).header;
 
@@ -43,7 +42,6 @@ const Header = () => {
         behavior: "smooth",
       });
     }
-    setIsMobileMenuOpen(false);
   };
 
   // Logo and text color based on scroll state
@@ -143,76 +141,75 @@ const Header = () => {
           </nav>
 
           <button
-            className="md:hidden p-2 z-50 relative"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2"
+            onClick={() => {
+              const nav = document.getElementById("mobile-nav");
+              nav?.classList.toggle("hidden");
+            }}
           >
-            {isMobileMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 transition-all duration-500 ${isScrolled ? "text-primary" : "text-white/85"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <>
-                <div className={`w-6 h-0.5 mb-1 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
-                <div className={`w-6 h-0.5 mb-1 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
-                <div className={`w-6 h-0.5 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
-              </>
-            )}
+            <div className={`w-6 h-0.5 mb-1 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
+            <div className={`w-6 h-0.5 mb-1 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
+            <div className={`w-6 h-0.5 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
           </button>
         </div>
 
-        {isMobileMenuOpen && (
-          <div className="fixed inset-0 top-0 left-0 w-full h-full bg-[#29445B] z-40 md:hidden flex flex-col">
-            <div className="pt-24 px-6 flex-1">
-              <nav className="flex flex-col gap-6">
+        <div id="mobile-nav" className="hidden md:hidden pb-4">
+          <nav className="flex flex-col gap-4">
+            <button
+              onClick={() => scrollToSection("inicio")}
+              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
+            >
+              {t.home}
+            </button>
+            <button
+              onClick={() => scrollToSection("sobre")}
+              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
+            >
+              {t.about}
+            </button>
+            <button
+              onClick={() => scrollToSection("servicos")}
+              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
+            >
+              {t.services}
+            </button>
+            <button
+              onClick={() => scrollToSection("depoimentos")}
+              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
+            >
+              {t.testimonials}
+            </button>
+            
+            <div className="flex items-center gap-2 py-2">
+              {languages.map((lang) => (
                 <button
-                  onClick={() => scrollToSection("inicio")}
-                  className="text-lg font-medium text-white/90 text-left hover:text-white transition-all"
+                  key={lang.code}
+                  onClick={() => setLanguage(lang.code)}
+                  className={`text-2xl hover:scale-110 transition-smooth ${
+                    language === lang.code ? "scale-110" : "opacity-60"
+                  }`}
                 >
-                  {t.home}
+                  {lang.flag}
                 </button>
-                <button
-                  onClick={() => scrollToSection("sobre")}
-                  className="text-lg font-medium text-white/90 text-left hover:text-white transition-all"
-                >
-                  {t.about}
-                </button>
-                <button
-                  onClick={() => scrollToSection("servicos")}
-                  className="text-lg font-medium text-white/90 text-left hover:text-white transition-all"
-                >
-                  {t.services}
-                </button>
-                <button
-                  onClick={() => scrollToSection("depoimentos")}
-                  className="text-lg font-medium text-white/90 text-left hover:text-white transition-all"
-                >
-                  {t.testimonials}
-                </button>
-                
-                <div className="flex items-center gap-3 py-2">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => setLanguage(lang.code)}
-                      className={`text-2xl hover:scale-110 transition-smooth ${
-                        language === lang.code ? "scale-110" : "opacity-60"
-                      }`}
-                    >
-                      {lang.flag}
-                    </button>
-                  ))}
-                </div>
-                
-                <Button
-                  onClick={() => scrollToSection("contato")}
-                  className="bg-primary hover:bg-primary/90 w-full"
-                >
-                  {t.contact}
-                </Button>
-              </nav>
+              ))}
             </div>
-          </div>
-        )}
+            
+            <Button
+              onClick={() => scrollToSection("contato")}
+              className="bg-primary hover:bg-primary/90 w-full"
+            >
+              {t.contact}
+            </Button>
+          </nav>
+        </div>
       </div>
     </header>
   );
