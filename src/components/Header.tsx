@@ -52,8 +52,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-soft"
-          : "bg-transparent"
+        ? isMobileMenuOpen ? "bg-background shadow-large" : "bg-background/95 backdrop-blur-md shadow-soft"
+          : isMobileMenuOpen ? "bg-[hsl(var(--navy-dark))] shadow-large" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
