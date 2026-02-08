@@ -51,9 +51,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
-        isScrolled
-        ? isMobileMenuOpen ? "bg-background shadow-large" : "bg-background/95 backdrop-blur-md shadow-soft"
-          : isMobileMenuOpen ? "bg-[hsl(var(--navy-dark))] shadow-large" : "bg-transparent"
+        isMobileMenuOpen ? "bg-[hsl(var(--navy))] shadow-large" :
+        isScrolled ? "bg-background/95 backdrop-blur-md shadow-soft" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -146,7 +145,7 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-all duration-500 ${isScrolled ? "text-primary" : "text-white/85"}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/85">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
@@ -164,33 +163,25 @@ const Header = () => {
           <nav className="flex flex-col gap-4">
             <button
               onClick={() => scrollToSection("inicio")}
-              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
-                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
-              }`}
+              className="text-sm font-medium text-left hover:opacity-80 text-white/85"
             >
               {t.home}
             </button>
             <button
               onClick={() => scrollToSection("sobre")}
-              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
-                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
-              }`}
+              className="text-sm font-medium text-left hover:opacity-80 text-white/85"
             >
               {t.about}
             </button>
             <button
               onClick={() => scrollToSection("servicos")}
-              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
-                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
-              }`}
+              className="text-sm font-medium text-left hover:opacity-80 text-white/85"
             >
               {t.services}
             </button>
             <button
               onClick={() => scrollToSection("depoimentos")}
-              className={`text-sm font-medium transition-all duration-500 text-left hover:opacity-80 ${
-                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
-              }`}
+              className="text-sm font-medium text-left hover:opacity-80 text-white/85"
             >
               {t.testimonials}
             </button>
@@ -211,7 +202,7 @@ const Header = () => {
             
             <Button
               onClick={() => scrollToSection("contato")}
-              className="bg-primary hover:bg-primary/90 w-full"
+              className="bg-[hsl(var(--navy-dark))] hover:bg-[hsl(var(--navy-dark))]/90 text-white w-full"
             >
               {t.contact}
             </Button>
