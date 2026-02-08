@@ -12,6 +12,7 @@ import { getTranslation } from "@/lib/translations";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
   const t = getTranslation(language).header;
 
@@ -142,18 +143,24 @@ const Header = () => {
 
           <button
             className="md:hidden p-2"
-            onClick={() => {
-              const nav = document.getElementById("mobile-nav");
-              nav?.classList.toggle("hidden");
-            }}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <div className={`w-6 h-0.5 mb-1 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
-            <div className={`w-6 h-0.5 mb-1 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
-            <div className={`w-6 h-0.5 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
+            {isMobileMenuOpen ? (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-all duration-500 ${isScrolled ? "text-primary" : "text-white/85"}`}>
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            ) : (
+              <>
+                <div className={`w-6 h-0.5 mb-1 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
+                <div className={`w-6 h-0.5 mb-1 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
+                <div className={`w-6 h-0.5 transition-all duration-500 ${isScrolled ? "bg-primary" : "bg-white/85"}`}></div>
+              </>
+            )}
           </button>
         </div>
 
-        <div id="mobile-nav" className="hidden md:hidden pb-4">
+        <div id="mobile-nav" className={`${isMobileMenuOpen ? '' : 'hidden'} md:hidden pb-4`}>
           <nav className="flex flex-col gap-4">
             <button
               onClick={() => scrollToSection("inicio")}
