@@ -52,7 +52,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
-        isMobileMenuOpen ? "bg-[hsl(var(--navy-light))] shadow-large" :
+        isMobileMenuOpen ? "bg-[hsl(var(--navy))] shadow-large" :
         isScrolled ? "bg-background/95 backdrop-blur-md shadow-soft" : "bg-transparent"
       }`}
     >
