@@ -119,7 +119,7 @@ const Contact = () => {
                     size="icon"
                     variant="outline"
                     className="hover:bg-accent hover:text-white transition-smooth"
-                    onClick={() => window.open("https://www.instagram.com/carolineadvogada.sc/", "_blank")}
+                    onClick={() => window.open("https://www.instagram.com/carolineadvogada.sc?igsh=NmMwYm9neTd4ZDVx", "_blank")}
                     aria-label="Instagram"
                   >
                     <Instagram className="h-5 w-5" />
