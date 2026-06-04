@@ -84,9 +84,9 @@ const Contact = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="animate-slide-up space-y-6">
-            <Card className="shadow-medium gradient-card">
-              <CardContent className="p-6">
+          <div className="animate-slide-up space-y-6 flex flex-col h-full">
+            <Card className="shadow-medium gradient-card flex-1 flex flex-col">
+              <CardContent className="p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold text-primary mb-6">
                   {t.contactInfo}
                 </h3>
@@ -98,7 +98,7 @@ const Contact = () => {
                     rel="noopener noreferrer"
                     className="flex items-start gap-3 hover:opacity-80 transition-opacity cursor-pointer"
                   >
-                    <WhatsAppIcon className="h-5 w-5 text-accent mt-1" />
+                    <WhatsAppIcon className="h-7 w-7 -ml-1 -mt-0.5 text-accent shrink-0" />
                     <div>
                       <p className="font-medium">WhatsApp</p>
                       <p className="text-foreground/70">(48) 9 9158-0285</p>
@@ -119,8 +119,8 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-medium gradient-card">
-              <CardContent className="p-6">
+            <Card className="shadow-medium gradient-card flex-1 flex flex-col">
+              <CardContent className="p-6 flex-1 flex flex-col justify-center">
                 <h3 className="text-xl font-semibold text-primary mb-4">
                   {t.socialMedia}
                 </h3>
@@ -157,7 +157,7 @@ const Contact = () => {
             </Card>
           </div>
 
-          <Card className="shadow-medium gradient-card animate-slide-up">
+          <Card className="shadow-medium gradient-card animate-slide-up h-full">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold text-primary mb-6">
                 {t.sendMessage}
