@@ -216,7 +216,7 @@ export const translations = {
       home: "Inicio",
       about: "Acerca",
       services: "Servicios",
-      testimonials: "Testimonios",
+      testimonials: "Opiniones",
       contact: "Contacto",
     },
     hero: {
