@@ -120,7 +120,7 @@ const Contact = () => {
             </Card>
 
             <Card className="shadow-medium gradient-card flex-1 flex flex-col">
-              <CardContent className="p-6 flex-1 flex flex-col justify-center">
+              <CardContent className="p-6 flex-1 flex flex-col justify-start">
                 <h3 className="text-xl font-semibold text-primary mb-4">
                   {t.socialMedia}
                 </h3>
