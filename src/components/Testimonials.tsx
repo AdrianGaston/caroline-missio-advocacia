@@ -1,5 +1,12 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getTranslation } from "@/lib/translations";
 
@@ -8,30 +15,11 @@ const Testimonials = () => {
   const t = getTranslation(language).testimonials;
 
   const testimonials = [
-    {
-      name: t.client1.name,
-      role: t.client1.role,
-      content: t.client1.content,
-      rating: 5,
-    },
-    {
-      name: t.client2.name,
-      role: t.client2.role,
-      content: t.client2.content,
-      rating: 5,
-    },
-    {
-      name: t.client3.name,
-      role: t.client3.role,
-      content: t.client3.content,
-      rating: 5,
-    },
-    {
-      name: t.client4.name,
-      role: t.client4.role,
-      content: t.client4.content,
-      rating: 5,
-    },
+    { name: t.client1.name, role: t.client1.role, content: t.client1.content, rating: 5 },
+    { name: t.client2.name, role: t.client2.role, content: t.client2.content, rating: 5 },
+    { name: t.client3.name, role: t.client3.role, content: t.client3.content, rating: 5 },
+    { name: t.client4.name, role: t.client4.role, content: t.client4.content, rating: 5 },
+    { name: t.client5.name, role: t.client5.role, content: t.client5.content, rating: 5 },
   ];
 
   return (
@@ -46,30 +34,43 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              className="shadow-soft hover:shadow-medium transition-smooth animate-slide-up gradient-card"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
-                  ))}
-                </div>
-                <p className="text-foreground/80 mb-6 leading-relaxed italic">
-                  "{testimonial.content}"
-                </p>
-                <div>
-                  <p className="font-semibold text-primary">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <Carousel
+          opts={{ align: "start", loop: false, dragFree: false }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-6">
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-6 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+              >
+                <Card className="h-full shadow-soft hover:shadow-medium transition-smooth gradient-card">
+                  <CardContent className="pt-6 h-full flex flex-col">
+                    <div className="flex mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
+                      ))}
+                    </div>
+                    <p className="text-foreground/80 mb-6 leading-relaxed italic flex-1">
+                      "{testimonial.content}"
+                    </p>
+                    <div>
+                      <p className="font-semibold text-primary">{testimonial.name}</p>
+                      {testimonial.role && (
+                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          <div className="flex justify-center items-center gap-4 mt-8 relative">
+            <CarouselPrevious className="static translate-y-0 bg-primary text-primary-foreground hover:bg-primary/90 border-primary" />
+            <CarouselNext className="static translate-y-0 bg-primary text-primary-foreground hover:bg-primary/90 border-primary" />
+          </div>
+        </Carousel>
       </div>
     </section>
   );
