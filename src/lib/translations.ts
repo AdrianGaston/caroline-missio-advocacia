@@ -290,26 +290,41 @@ export const translations = {
         description: "Contratos, indemnizaciones, responsabilidad civil y actuación estratégica en la conducción de procesos judiciales y administrativos",
       },
     },
+    publications: {
+      title: "Publicaciones",
+      subtitle: "Producción académica y científica en las áreas de actuación",
+      area: "Derecho Migratorio",
+      readArticle: "Leer artículo completo",
+      article1: {
+        title: "Políticas migratorias brasileñas: un resumen del Estatuto del Extranjero, la evolución creada por la Ley de Migración de 2017 y la percepción de Brasil como destino migratorio",
+        description: "Análisis de la evolución de las políticas migratorias en Brasil, desde el Estatuto del Extranjero hasta la Ley de Migración de 2017, abordando los avances en los derechos de los inmigrantes y los desafíos de integración en el país.",
+      },
+    },
     testimonials: {
       title: "Lo que dicen mis clientes",
       subtitle: "La satisfacción de mis clientes es la mayor recompensa de mi trabajo.",
       client1: {
-        name: "Shedlene",
+        name: "Shedlene Exalus",
         role: "",
         content: "Su ayuda y apoyo fueron invaluables para mí, no existen palabras suficientes para agradecerle.",
       },
       client2: {
-        name: "Richard",
+        name: "Richard Similien",
         role: "",
         content: "Mis sinceros agradecimientos por su ayuda, gracias por ser tan servicial y atenta, estoy muy agradecido por su apoyo en todo momento.",
       },
       client3: {
-        name: "Milourde",
+        name: "Milourde Salomón",
         role: "",
         content: "Eres una persona muy especial, tu ayuda fue muy fundamental para mí.",
       },
       client4: {
-        name: "Estily",
+        name: "Susana Alejandra Fernández",
+        role: "",
+        content: "La doctora Caroline resolvió nuestro problema con la máxima dedicación, atención a los detalles y comunicación constante y clara. Ella es una profesional súper competente y confiable. ¡¡¡Estamos muy agradecidos por su ayuda!!!",
+      },
+      client5: {
+        name: "Dieuconserve Estily",
         role: "",
         content: "Dra. Caroline me ayudó a traer a mi familia a Brasil, estoy muy agradecido con ella, siempre muy atenta, valora a cualquier persona que necesita.",
       },
