@@ -189,6 +189,12 @@ const Header = () => {
               {t.services}
             </button>
             <button
+              onClick={() => scrollToSection("publicacoes")}
+              className="text-sm font-medium text-left hover:opacity-80 text-white/85"
+            >
+              {t.publications}
+            </button>
+            <button
               onClick={() => scrollToSection("depoimentos")}
               className="text-sm font-medium text-left hover:opacity-80 text-white/85"
             >
