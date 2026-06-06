@@ -248,6 +248,7 @@ export const translations = {
       home: "Inicio",
       about: "Acerca",
       services: "Servicios",
+      publications: "Publicaciones",
       testimonials: "Opiniones",
       contact: "Contacto",
     },
