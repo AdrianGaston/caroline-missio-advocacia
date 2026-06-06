@@ -6,6 +6,7 @@ export const translations = {
       home: "Início",
       about: "Sobre",
       services: "Serviços",
+      publications: "Publicações",
       testimonials: "Depoimentos",
       contact: "Contato",
     },
