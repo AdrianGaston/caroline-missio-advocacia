@@ -169,26 +169,41 @@ export const translations = {
         description: "Contracts, compensation claims, civil liability, and strategic legal representation in administrative and judicial proceedings.",
       },
     },
+    publications: {
+      title: "Publications",
+      subtitle: "Academic and scientific production in the practice areas",
+      area: "Immigration Law",
+      readArticle: "Read full article",
+      article1: {
+        title: "Brazilian migration policies: a summary of the Foreigners' Statute, the developments introduced by the 2017 Migration Law, and the perception of Brazil as a migration destination",
+        description: "Analysis of the evolution of migration policies in Brazil, from the Foreigners' Statute to the 2017 Migration Law, addressing advances in immigrants' rights and integration challenges in the country.",
+      },
+    },
     testimonials: {
       title: "What my clients say",
       subtitle: "My clients' satisfaction is the greatest reward of my work.",
       client1: {
-        name: "Shedlene",
+        name: "Shedlene Exalus",
         role: "",
         content: "Your help and support were invaluable to me, there are not enough words to thank you.",
       },
       client2: {
-        name: "Richard",
+        name: "Richard Similien",
         role: "",
         content: "My sincere thanks for your help, thank you for being so helpful and attentive, I am very grateful for your support at all times.",
       },
       client3: {
-        name: "Milourde",
+        name: "Milourde Salomón",
         role: "",
         content: "You are a very special person; your help was essential to me.",
       },
       client4: {
-        name: "Estily",
+        name: "Susana Alejandra Fernández",
+        role: "",
+        content: "Attorney Caroline solved our problem with maximum dedication, attention to detail, and constant and clear communication. She is a super competent and reliable professional. We are very grateful for her help!!!",
+      },
+      client5: {
+        name: "Dieuconserve Estily",
         role: "",
         content: "Dr. Caroline helped me bring my family to Brazil. I am very grateful to her, she is always very attentive and values everyone who needs help.",
       },
