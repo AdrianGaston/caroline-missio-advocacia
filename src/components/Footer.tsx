@@ -46,7 +46,17 @@ const Footer = () => {
         <div className="border-t border-white/20 pt-8 text-center text-sm text-white/80">
           <p>© {currentYear} Dra. Caroline Missio - {t.rights}</p>
           <p className="mt-2">OAB/SC 25949</p>
-          <p className="mt-4 text-xs text-white/50">{t.developedBy} Adrián Lumbía</p>
+          <p className="mt-4 text-xs text-white/50">
+            {t.developedBy}{" "}
+            <a
+              href="https://www.linkedin.com/in/adrian-lumbia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white/80 transition-smooth underline-offset-2 hover:underline"
+            >
+              Adrián Lumbía
+            </a>
+          </p>
         </div>
       </div>
     </footer>
