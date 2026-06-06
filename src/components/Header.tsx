@@ -103,6 +103,14 @@ const Header = () => {
               {t.services}
             </button>
             <button
+              onClick={() => scrollToSection("publicacoes")}
+              className={`text-sm font-medium transition-all duration-500 hover:opacity-80 ${
+                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
+              }`}
+            >
+              {t.publications}
+            </button>
+            <button
               onClick={() => scrollToSection("depoimentos")}
               className={`text-sm font-medium transition-all duration-500 hover:opacity-80 ${
                 isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/85"
