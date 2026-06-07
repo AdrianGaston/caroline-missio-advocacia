@@ -1,3 +1,5 @@
+import { useRef, useCallback } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -10,9 +12,32 @@ import {
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getTranslation } from "@/lib/translations";
 
+const AUTOPLAY_DELAY = 12000;
+const RESUME_AFTER_INTERACTION = 30000;
+
 const Testimonials = () => {
   const { language } = useLanguage();
   const t = getTranslation(language).testimonials;
+
+  const autoplay = useRef(
+    Autoplay({
+      delay: AUTOPLAY_DELAY,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+    })
+  );
+
+  const resumeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleInteraction = useCallback(() => {
+    const plugin = autoplay.current;
+    if (!plugin) return;
+    plugin.stop();
+    if (resumeTimeout.current) clearTimeout(resumeTimeout.current);
+    resumeTimeout.current = setTimeout(() => {
+      plugin.play();
+    }, RESUME_AFTER_INTERACTION);
+  }, []);
 
   const testimonials = [
     { name: t.client1.name, role: t.client1.role, content: t.client1.content, rating: 5 },
@@ -40,6 +65,7 @@ const Testimonials = () => {
 
         <Carousel
           opts={{ align: "start", loop: true, dragFree: false }}
+          plugins={[autoplay.current]}
           className="w-full"
         >
           <CarouselContent className="-ml-6">
@@ -71,8 +97,14 @@ const Testimonials = () => {
           </CarouselContent>
 
           <div className="flex justify-center items-center gap-4 mt-8 relative">
-            <CarouselPrevious className="static translate-y-0 bg-primary text-primary-foreground hover:bg-primary/90 border-primary" />
-            <CarouselNext className="static translate-y-0 bg-primary text-primary-foreground hover:bg-primary/90 border-primary" />
+            <CarouselPrevious
+              onClick={handleInteraction}
+              className="static translate-y-0 bg-primary text-primary-foreground hover:bg-primary/90 border-primary"
+            />
+            <CarouselNext
+              onClick={handleInteraction}
+              className="static translate-y-0 bg-primary text-primary-foreground hover:bg-primary/90 border-primary"
+            />
           </div>
         </Carousel>
       </div>
