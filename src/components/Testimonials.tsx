@@ -39,7 +39,7 @@ const Testimonials = () => {
         </div>
 
         <Carousel
-          opts={{ align: "start", loop: false, dragFree: false }}
+          opts={{ align: "start", loop: true, dragFree: false }}
           className="w-full"
         >
           <CarouselContent className="-ml-6">
