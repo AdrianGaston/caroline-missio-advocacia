@@ -86,6 +86,26 @@ export const translations = {
         role: "",
         content: "Dra Caroline me ajudou a trazer minha família para o Brasil sou muito grato a ela, sempre muito atenciosa, dá valor a qualquer pessoa que necessita.",
       },
+      client6: {
+        name: "Joelma Guedes",
+        role: "",
+        content: "Sou muito grata a Dra. Caroline por ela ser essa excelente profissional. Sua ajuda foi fundamental para solucionar meu problema.",
+      },
+      client7: {
+        name: "Álvaro Freda",
+        role: "",
+        content: "Ética, profissionalismo e dedicação, são qualidades que a fazem diferente em seu trabalho! Obrigado pela sua ajuda.",
+      },
+      client8: {
+        name: "Cecilia González Ciarcelluti",
+        role: "",
+        content: "A Dra. Caroline é daquelas pessoas que fazem a diferença de verdade. Além da competência o que mais me marcou foi a disposição dela em ajudar, a gentileza em cada conversa e a paz que ela transmite. Com ela, sempre me senti segura. Recomendo de coração.",
+      },
+      client9: {
+        name: "Camila Arias",
+        role: "",
+        content: "A Dra Caroline é uma profissional séria, competente e verdadeiramente comprometida com seus clientes. Muito obrigada por toda a ajuda e dedicação!",
+      },
     },
     contact: {
       title: "Entre em Contato",
