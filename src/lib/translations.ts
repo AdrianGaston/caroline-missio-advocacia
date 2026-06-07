@@ -227,6 +227,26 @@ export const translations = {
         role: "",
         content: "Dr. Caroline helped me bring my family to Brazil. I am very grateful to her, she is always very attentive and values everyone who needs help.",
       },
+      client6: {
+        name: "Joelma Guedes",
+        role: "",
+        content: "I am very grateful to Attorney Caroline for being such an excellent professional. Her help was essential to solve my problem.",
+      },
+      client7: {
+        name: "Álvaro Freda",
+        role: "",
+        content: "Ethics, professionalism and dedication are qualities that make her different in her work. Thank you for your help.",
+      },
+      client8: {
+        name: "Cecilia González Ciarcelluti",
+        role: "",
+        content: "Dr. Caroline is one of those people who truly make a difference. Beyond her competence, what stood out to me the most was her willingness to help, the kindness in every conversation, and the peace she conveys. With her, I always felt safe. I wholeheartedly recommend her.",
+      },
+      client9: {
+        name: "Camila Arias",
+        role: "",
+        content: "Attorney Caroline is a serious, competent, and truly committed professional dedicated to her clients. Thank you very much for all your help and dedication!",
+      },
     },
     contact: {
       title: "Get in Touch",
@@ -316,7 +336,7 @@ export const translations = {
       area: "Derecho Migratorio",
       readArticle: "Leer artículo completo",
       article1: {
-        title: "Políticas migratorias brasileñas: un resumen del Estatuto del Extranjero, la evolución creada por la Ley de Migración de 2017 y la percepción de Brasil como destino migratorio",
+        title: "Políticas migratorias brasileñas: un resumen del Estatuto del Extranjero, las evoluciones introducidas por la Ley de Migración de 2017 y la percepción de Brasil como destino migratorio",
         description: "Análisis de la evolución de las políticas migratorias en Brasil, desde el Estatuto del Extranjero hasta la Ley de Migración de 2017, abordando los avances en los derechos de los inmigrantes y los desafíos de integración en el país.",
       },
     },
@@ -347,6 +367,26 @@ export const translations = {
         name: "Dieuconserve Estily",
         role: "",
         content: "Dra. Caroline me ayudó a traer a mi familia a Brasil, estoy muy agradecido con ella, siempre muy atenta, valora a cualquier persona que necesita.",
+      },
+      client6: {
+        name: "Joelma Guedes",
+        role: "",
+        content: "Estoy muy agradecida con la Dra. Caroline por ser esa excelente profesional. Su ayuda fue fundamental para solucionar mi problema.",
+      },
+      client7: {
+        name: "Álvaro Freda",
+        role: "",
+        content: "Ética, profesionalismo y dedicación son cualidades que la hacen diferente en su trabajo. ¡Gracias por su ayuda.",
+      },
+      client8: {
+        name: "Cecilia González Ciarcelluti",
+        role: "",
+        content: "La Dra. Caroline es de esas personas que marcan la diferencia de verdad. Además de su competencia, lo que más me marcó fue su disposición a ayudar, la amabilidad en cada conversación y la paz que transmite. Con ella, siempre me sentí segura. La recomiendo de corazón.",
+      },
+      client9: {
+        name: "Camila Arias",
+        role: "",
+        content: "La Dra. Caroline es una profesional seria, competente y verdaderamente comprometida con sus clientes. ¡Muchas gracias por toda la ayuda y dedicación!",
       },
     },
     contact: {
