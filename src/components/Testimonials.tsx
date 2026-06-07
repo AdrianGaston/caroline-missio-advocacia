@@ -17,9 +17,13 @@ const Testimonials = () => {
   const testimonials = [
     { name: t.client1.name, role: t.client1.role, content: t.client1.content, rating: 5 },
     { name: t.client2.name, role: t.client2.role, content: t.client2.content, rating: 5 },
-    { name: t.client3.name, role: t.client3.role, content: t.client3.content, rating: 5 },
     { name: t.client4.name, role: t.client4.role, content: t.client4.content, rating: 5 },
+    { name: t.client3.name, role: t.client3.role, content: t.client3.content, rating: 5 },
+    { name: t.client6.name, role: t.client6.role, content: t.client6.content, rating: 5 },
     { name: t.client5.name, role: t.client5.role, content: t.client5.content, rating: 5 },
+    { name: t.client7.name, role: t.client7.role, content: t.client7.content, rating: 5 },
+    { name: t.client8.name, role: t.client8.role, content: t.client8.content, rating: 5 },
+    { name: t.client9.name, role: t.client9.role, content: t.client9.content, rating: 5 },
   ];
 
   return (
