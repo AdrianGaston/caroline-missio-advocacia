@@ -1,13 +1,13 @@
-import { useRef, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import { Star } from "lucide-react";
+import { ArrowLeft, ArrowRight, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getTranslation } from "@/lib/translations";
@@ -27,9 +27,10 @@ const Testimonials = () => {
     })
   );
 
+  const [api, setApi] = useState<CarouselApi>();
   const resumeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const handleInteraction = useCallback(() => {
+  const pauseAndScheduleResume = useCallback(() => {
     const plugin = autoplay.current;
     if (!plugin) return;
     plugin.stop();
@@ -38,6 +39,31 @@ const Testimonials = () => {
       plugin.play();
     }, RESUME_AFTER_INTERACTION);
   }, []);
+
+  useEffect(() => {
+    if (!api) return;
+    const onPointerDown = () => pauseAndScheduleResume();
+    api.on("pointerDown", onPointerDown);
+    return () => {
+      api.off("pointerDown", onPointerDown);
+    };
+  }, [api, pauseAndScheduleResume]);
+
+  useEffect(() => {
+    return () => {
+      if (resumeTimeout.current) clearTimeout(resumeTimeout.current);
+    };
+  }, []);
+
+  const handlePrev = useCallback(() => {
+    api?.scrollPrev();
+    pauseAndScheduleResume();
+  }, [api, pauseAndScheduleResume]);
+
+  const handleNext = useCallback(() => {
+    api?.scrollNext();
+    pauseAndScheduleResume();
+  }, [api, pauseAndScheduleResume]);
 
   const testimonials = [
     { name: t.client1.name, role: t.client1.role, content: t.client1.content, rating: 5 },
@@ -64,6 +90,7 @@ const Testimonials = () => {
         </div>
 
         <Carousel
+          setApi={setApi}
           opts={{ align: "start", loop: true, dragFree: false }}
           plugins={[autoplay.current]}
           className="w-full"
@@ -96,15 +123,27 @@ const Testimonials = () => {
             ))}
           </CarouselContent>
 
-          <div className="flex justify-center items-center gap-4 mt-8 relative">
-            <CarouselPrevious
-              onClick={handleInteraction}
-              className="static translate-y-0 bg-primary text-primary-foreground hover:bg-primary/90 border-primary"
-            />
-            <CarouselNext
-              onClick={handleInteraction}
-              className="static translate-y-0 bg-primary text-primary-foreground hover:bg-primary/90 border-primary"
-            />
+          <div className="flex justify-center items-center gap-4 mt-8">
+            <Button
+              type="button"
+              variant="outline"
+              size="icon"
+              onClick={handlePrev}
+              aria-label="Previous slide"
+              className="h-8 w-8 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground border-primary"
+            >
+              <ArrowLeft className="h-4 w-4" />
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              size="icon"
+              onClick={handleNext}
+              aria-label="Next slide"
+              className="h-8 w-8 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground border-primary"
+            >
+              <ArrowRight className="h-4 w-4" />
+            </Button>
           </div>
         </Carousel>
       </div>
