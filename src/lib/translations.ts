@@ -69,7 +69,7 @@ export const translations = {
       client2: {
         name: "Richard Similien",
         role: "",
-        content: "Meus sinceros agradecimentos pela sua ajuda, obrigada por ser tão prestativa e atenciosa, sou muito grato por ter seu suporte em todos os momentos.",
+        content: "Meus sinceros agradecimentos pela sua ajuda, obrigado por ser tão prestativa e atenciosa, sou muito grato por ter seu suporte em todos os momentos.",
       },
       client3: {
         name: "Milourde Salomón",
