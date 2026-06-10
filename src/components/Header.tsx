@@ -47,7 +47,7 @@ const Header = () => {
   };
 
   // Logo and text color based on scroll state
-  const logoColor = isScrolled ? "#29445B" : "#d2bfb1";
+  const logoColor = isScrolled ? "#3b485e" : "#d0bdaf";
 
   return (
     <header
