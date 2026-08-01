@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Zahrah';
+  src: url('/__l5e/assets-v1/51eecbf3-d6a7-4df9-b346-58689267b24e/Zahrah.woff2') format('woff2'),
+       url('/__l5e/assets-v1/87949241-ecbc-4b91-a119-64cedea58285/Zahrah.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -122,11 +131,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Zahrah', 'Playfair Display', serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Zahrah', 'Playfair Display', serif;
   }
   
   p, span, button, a, input, textarea, select, label, li {
