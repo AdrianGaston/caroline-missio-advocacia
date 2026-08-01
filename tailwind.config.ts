@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
+        playfair: ["Zahrah", "Playfair Display", "serif"],
+        display: ["Zahrah", "Playfair Display", "serif"],
         sans: ["Montserrat", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
