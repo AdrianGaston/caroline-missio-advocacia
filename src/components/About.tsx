@@ -11,7 +11,7 @@ const About = () => {
   return (
     <section id="sobre" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
             <img
               src={draCarolinePhoto}
