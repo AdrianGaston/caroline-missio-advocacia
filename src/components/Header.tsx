@@ -70,14 +70,14 @@ const Header = () => {
               }`} 
             />
             <span 
-              className="text-xl md:text-2xl font-semibold font-playfair transition-all duration-500"
+              className="text-xl md:text-2xl font-semibold font-playfair whitespace-nowrap transition-all duration-500"
               style={{ color: logoColor }}
             >
               Caroline Missio
             </span>
           </button>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("inicio")}
               className={`text-sm font-medium transition-all duration-500 hover:opacity-80 ${
@@ -150,7 +150,7 @@ const Header = () => {
           </nav>
 
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -168,7 +168,7 @@ const Header = () => {
           </button>
         </div>
 
-        <div id="mobile-nav" className={`${isMobileMenuOpen ? '' : 'hidden'} md:hidden pb-4`}>
+        <div id="mobile-nav" className={`${isMobileMenuOpen ? '' : 'hidden'} lg:hidden pb-4`}>
           <nav className="flex flex-col gap-4">
             <button
               onClick={() => scrollToSection("inicio")}
