@@ -16,6 +16,8 @@ const About = () => {
             <img
               src={draCarolinePhoto}
               alt="Dra. Caroline Missio"
+              loading="lazy"
+              decoding="async"
               className="rounded-lg shadow-large w-full h-[500px] object-cover"
             />
           </div>
