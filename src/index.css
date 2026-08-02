@@ -2,22 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Zahrah is a single static face (usWeightClass 700, not variable).
-   Declaring an explicit weight per @font-face keeps Safari/iOS and older
-   mobile browsers from rejecting the match and falling back to the old font. */
+/* Zahrah is a static bold face. Use the asset host explicitly because the
+   custom domain does not proxy /__l5e asset routes. */
 @font-face {
   font-family: 'Zahrah';
-  src: url('/__l5e/assets-v1/51eecbf3-d6a7-4df9-b346-58689267b24e/Zahrah.woff2') format('woff2'),
-       url('/__l5e/assets-v1/87949241-ecbc-4b91-a119-64cedea58285/Zahrah.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Zahrah';
-  src: url('/__l5e/assets-v1/51eecbf3-d6a7-4df9-b346-58689267b24e/Zahrah.woff2') format('woff2'),
-       url('/__l5e/assets-v1/87949241-ecbc-4b91-a119-64cedea58285/Zahrah.otf') format('opentype');
+  src: url('https://caroline-missio-advocacia.lovable.app/__l5e/assets-v1/51eecbf3-d6a7-4df9-b346-58689267b24e/Zahrah.woff2') format('woff2'),
+       url('https://caroline-missio-advocacia.lovable.app/__l5e/assets-v1/87949241-ecbc-4b91-a119-64cedea58285/Zahrah.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;

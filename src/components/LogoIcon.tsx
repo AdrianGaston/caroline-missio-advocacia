@@ -10,6 +10,7 @@ const LogoIcon = ({ className = "h-10 w-10" }: LogoIconProps) => {
     <img
       src={logoNew}
       alt="Caroline Missio Logo"
+      decoding="async"
       className={className}
     />
   );
