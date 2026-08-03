@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import LogoIcon from "@/components/LogoIcon";
+import FlagIcon from "@/components/FlagIcon";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,12 +18,13 @@ const Header = () => {
   const t = getTranslation(language).header;
 
   const languages = [
-    { code: "pt" as const, name: "Português", flag: "🇧🇷" },
-    { code: "en" as const, name: "English", flag: "🇺🇸" },
-    { code: "es" as const, name: "Español", flag: "🇪🇸" },
+    { code: "pt" as const, name: "Português" },
+    { code: "en" as const, name: "English" },
+    { code: "es" as const, name: "Español" },
   ];
 
   const currentLanguage = languages.find((lang) => lang.code === language);
+
 
   useEffect(() => {
     const handleScroll = () => {
