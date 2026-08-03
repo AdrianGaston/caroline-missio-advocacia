@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import LogoIcon from "@/components/LogoIcon";
+import FlagIcon from "@/components/FlagIcon";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,12 +18,13 @@ const Header = () => {
   const t = getTranslation(language).header;
 
   const languages = [
-    { code: "pt" as const, name: "Português", flag: "🇧🇷" },
-    { code: "en" as const, name: "English", flag: "🇺🇸" },
-    { code: "es" as const, name: "Español", flag: "🇪🇸" },
+    { code: "pt" as const, name: "Português" },
+    { code: "en" as const, name: "English" },
+    { code: "es" as const, name: "Español" },
   ];
 
   const currentLanguage = languages.find((lang) => lang.code === language);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -122,10 +124,13 @@ const Header = () => {
             
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className={`text-2xl transition-all duration-500 hover:scale-110 focus:outline-none ${
-                  isScrolled ? "opacity-100" : "drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]"
-                }`}>
-                  {currentLanguage?.flag}
+                <button
+                  aria-label={currentLanguage?.name}
+                  className={`transition-all duration-500 hover:scale-110 focus:outline-none ${
+                    isScrolled ? "opacity-100" : "drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]"
+                  }`}
+                >
+                  <FlagIcon code={language} className="h-5 w-7" />
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
@@ -135,12 +140,13 @@ const Header = () => {
                     onClick={() => setLanguage(lang.code)}
                     className="cursor-pointer flex items-center gap-2"
                   >
-                    <span className="text-xl">{lang.flag}</span>
+                    <FlagIcon code={lang.code} className="h-4 w-6" />
                     <span>{lang.name}</span>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+
 
             <Button
               onClick={() => scrollToSection("contato")}
@@ -207,13 +213,15 @@ const Header = () => {
                 <button
                   key={lang.code}
                   onClick={() => setLanguage(lang.code)}
-                  className={`text-2xl hover:scale-110 transition-smooth ${
+                  aria-label={lang.name}
+                  className={`hover:scale-110 transition-smooth ${
                     language === lang.code ? "scale-110" : "opacity-60"
                   }`}
                 >
-                  {lang.flag}
+                  <FlagIcon code={lang.code} className="h-5 w-7" />
                 </button>
               ))}
+
             </div>
             
             <Button
