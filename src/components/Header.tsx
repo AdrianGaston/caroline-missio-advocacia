@@ -213,13 +213,15 @@ const Header = () => {
                 <button
                   key={lang.code}
                   onClick={() => setLanguage(lang.code)}
-                  className={`text-2xl hover:scale-110 transition-smooth ${
+                  aria-label={lang.name}
+                  className={`hover:scale-110 transition-smooth ${
                     language === lang.code ? "scale-110" : "opacity-60"
                   }`}
                 >
-                  {lang.flag}
+                  <FlagIcon code={lang.code} className="h-5 w-7" />
                 </button>
               ))}
+
             </div>
             
             <Button
