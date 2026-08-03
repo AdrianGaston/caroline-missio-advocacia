@@ -190,14 +190,21 @@ const Contact = () => {
                 {t.sendMessage}
               </h3>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 <div>
                   <Input
                     placeholder={`${t.fullName} *`}
                     value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
+                    maxLength={100}
+                    aria-invalid={!!errors.name}
+                    aria-describedby={errors.name ? "contact-name-error" : undefined}
+                    onChange={(e) => updateField("name", e.target.value)}
                   />
+                  {errors.name && (
+                    <p id="contact-name-error" className="mt-1 text-sm text-destructive">
+                      {errors.name}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -205,16 +212,24 @@ const Contact = () => {
                     type="email"
                     placeholder={`${t.email} *`}
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
+                    maxLength={255}
+                    aria-invalid={!!errors.email}
+                    aria-describedby={errors.email ? "contact-email-error" : undefined}
+                    onChange={(e) => updateField("email", e.target.value)}
                   />
+                  {errors.email && (
+                    <p id="contact-email-error" className="mt-1 text-sm text-destructive">
+                      {errors.email}
+                    </p>
+                  )}
                 </div>
 
                 <div>
                   <Input
                     placeholder={t.phoneField}
                     value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    maxLength={30}
+                    onChange={(e) => updateField("phone", e.target.value)}
                   />
                 </div>
 
@@ -223,10 +238,18 @@ const Contact = () => {
                     placeholder={`${t.message} *`}
                     rows={5}
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
+                    maxLength={1000}
+                    aria-invalid={!!errors.message}
+                    aria-describedby={errors.message ? "contact-message-error" : undefined}
+                    onChange={(e) => updateField("message", e.target.value)}
                   />
+                  {errors.message && (
+                    <p id="contact-message-error" className="mt-1 text-sm text-destructive">
+                      {errors.message}
+                    </p>
+                  )}
                 </div>
+
 
                 <Button type="submit" disabled={isSubmitting} className="w-full bg-primary hover:bg-primary/90">
                   {t.sendButton}
