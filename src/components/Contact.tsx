@@ -32,12 +32,37 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+  const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validate = (data: typeof formData) => {
+    const next: { name?: string; email?: string; message?: string } = {};
+    if (!data.name.trim()) next.name = "Informe seu nome.";
+    else if (data.name.trim().length > 100) next.name = "O nome deve ter no máximo 100 caracteres.";
+
+    const email = data.email.trim();
+    if (!email) next.email = "Informe um e-mail válido.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || email.length > 255)
+      next.email = "Informe um e-mail válido.";
+
+    if (!data.message.trim()) next.message = "Informe sua mensagem.";
+    else if (data.message.trim().length > 1000)
+      next.message = "A mensagem deve ter no máximo 1000 caracteres.";
+
+    return next;
+  };
+
+  const updateField = (field: keyof typeof formData, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    setErrors((prev) => ({ ...prev, [field]: undefined }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.message) {
+    const validationErrors = validate(formData);
+    setErrors(validationErrors);
+    if (Object.keys(validationErrors).length > 0) {
       toast({
         title: t.requiredFields,
         description: t.fillRequired,
@@ -57,6 +82,7 @@ const Contact = () => {
       if (response.ok) {
         toast({ title: t.messageSent, description: t.messageSuccess });
         setFormData({ name: "", email: "", phone: "", message: "" });
+        setErrors({});
       } else {
         throw new Error("Failed");
       }
@@ -70,6 +96,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
+
 
   return (
     <section id="contato" className="py-20 bg-background">
