@@ -124,10 +124,13 @@ const Header = () => {
             
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className={`text-2xl transition-all duration-500 hover:scale-110 focus:outline-none ${
-                  isScrolled ? "opacity-100" : "drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]"
-                }`}>
-                  {currentLanguage?.flag}
+                <button
+                  aria-label={currentLanguage?.name}
+                  className={`transition-all duration-500 hover:scale-110 focus:outline-none ${
+                    isScrolled ? "opacity-100" : "drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]"
+                  }`}
+                >
+                  <FlagIcon code={language} className="h-5 w-7" />
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
@@ -137,12 +140,13 @@ const Header = () => {
                     onClick={() => setLanguage(lang.code)}
                     className="cursor-pointer flex items-center gap-2"
                   >
-                    <span className="text-xl">{lang.flag}</span>
+                    <FlagIcon code={lang.code} className="h-4 w-6" />
                     <span>{lang.name}</span>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+
 
             <Button
               onClick={() => scrollToSection("contato")}
