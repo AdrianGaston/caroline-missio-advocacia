@@ -15,10 +15,20 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 );
 
 const FacebookIcon = ({ className }: { className?: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor" className={className}>
-    <path d="M240 363.3L240 576L356 576L356 363.3L442.5 363.3L460.5 265.5L356 265.5L356 230.9C356 179.2 376.3 159.4 428.7 159.4C445 159.4 458.1 159.8 465.7 160.6L465.7 71.9C451.4 68 416.4 64 396.2 64C289.3 64 240 114.5 240 223.4L240 265.5L174 265.5L174 363.3L240 363.3z"/>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="16"
+    strokeLinejoin="round"
+    strokeLinecap="round"
+    className={className}
+  >
+    <path d="M376 8h-72c-64 0-116 40-116 112v48h-52v88h52v248h116V256h68l12-88h-80v-42c0-14 14-26 28-26h44V8z" />
   </svg>
 );
+
 
 const Contact = () => {
   const { toast } = useToast();
