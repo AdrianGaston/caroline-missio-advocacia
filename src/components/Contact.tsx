@@ -20,12 +20,12 @@ const FacebookIcon = ({ className }: { className?: string }) => (
     viewBox="0 0 512 512"
     fill="none"
     stroke="currentColor"
-    strokeWidth="16"
+    strokeWidth="34"
     strokeLinejoin="round"
     strokeLinecap="round"
     className={className}
   >
-    <path d="M376 8h-72c-64 0-116 40-116 112v48h-52v88h52v248h116V256h68l12-88h-80v-42c0-14 14-26 28-26h44V8z" />
+    <path d="M376 17h-56c-72 0-124 46-124 118v56h-58a14 14 0 0 0-14 14v72a14 14 0 0 0 14 14h58v204a14 14 0 0 0 14 14h68a14 14 0 0 0 14-14V291h60a14 14 0 0 0 14-14v-72a14 14 0 0 0-14-14h-60v-40c0-16 4-20 20-20h40a14 14 0 0 0 14-14V31a14 14 0 0 0-14-14z" />
   </svg>
 );
 
