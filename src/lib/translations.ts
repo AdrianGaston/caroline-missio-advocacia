@@ -301,9 +301,9 @@ export const translations = {
     },
     about: {
       title: "Sobre mí",
-      paragraph1: "Abogada registrada en el Colegio de Abogados de Santa Catarina (OAB/SC) bajo el número 25.949, con más de 15 años de experiencia en el ejercicio de la abogacía. Posgraduada en Derecho Migratorio, actúo de manera especializada asistiendo a extranjeros en procesos de residencia, naturalización, visas y regularización migratoria en Brasil, así como a brasileños que requieren orientación y asesoramiento jurídico tanto en Brasil como en el exterior.",
+      paragraph1: "Abogada registrada en el Colegio de Abogados de Santa Catarina (OAB/SC) bajo el número 25.949, con más de {{years}} años de experiencia en el ejercicio de la abogacía. Posgraduada en Derecho Migratorio, actúo de manera especializada asistiendo a extranjeros en procesos de residencia, naturalización, visas y regularización migratoria en Brasil, así como a brasileños que requieren orientación y asesoramiento jurídico tanto en Brasil como en el exterior.",
       paragraph2: "Cuento además con especializaciones en Derecho Procesal Civil y Derecho de la Seguridad Social, con amplia experiencia en consultoría jurídica y en el seguimiento de procesos administrativos y judiciales. Mi trabajo está guiado por la ética, la atención personalizada y la búsqueda de soluciones jurídicas seguras y humanizadas, ofreciendo un servicio accesible a personas de diferentes nacionalidades, promoviendo el diálogo intercultural.",
-      years: "15+ Años",
+      years: "{{years}}+ Años",
       experience: "de Experiencia",
       specialization: "Especialización",
       postgraduate: "Posgraduada",
