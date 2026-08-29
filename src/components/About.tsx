@@ -7,6 +7,8 @@ import { getTranslation } from "@/lib/translations";
 const About = () => {
   const { language } = useLanguage();
   const t = getTranslation(language).about;
+  const years = new Date().getFullYear() - 2011;
+  const formatYears = (text: string) => text.replace(/{{years}}/g, String(years));
 
   return (
     <section id="sobre" className="py-20 bg-secondary/30">
