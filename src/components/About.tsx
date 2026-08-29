@@ -29,7 +29,7 @@ const About = () => {
               {t.title}
             </h2>
             <p className="text-foreground/80 mb-6 leading-relaxed">
-              {t.paragraph1}
+              {formatYears(t.paragraph1)}
             </p>
             <p className="text-foreground/80 mb-8 leading-relaxed">
               {t.paragraph2}
@@ -38,7 +38,7 @@ const About = () => {
             <div className="grid sm:grid-cols-3 gap-4">
               <Card className="p-4 text-center shadow-soft hover:shadow-medium transition-smooth">
                 <Award className="h-8 w-8 text-accent mx-auto mb-2" />
-                <h3 className="font-semibold text-sm">{t.years}</h3>
+                <h3 className="font-semibold text-sm">{formatYears(t.years)}</h3>
                 <p className="text-xs text-muted-foreground">{t.experience}</p>
               </Card>
               <Card className="p-4 text-center shadow-soft hover:shadow-medium transition-smooth">
