@@ -160,9 +160,9 @@ export const translations = {
     },
     about: {
       title: "About Me",
-      paragraph1: "Attorney registered with OAB/SC under No. 25.949, with over 15 years of legal experience. I hold a postgraduate degree in Migration Law and specialize in assisting foreign nationals with visas, residence permits, naturalization, and immigration regularization in Brazil. I also assist Brazilians seeking legal guidance in Brazil and abroad. I provide legal representation throughout every stage of the immigration process, from initial planning to final approval.",
+      paragraph1: "Attorney registered with OAB/SC under No. 25.949, with over {{years}} years of legal experience. I hold a postgraduate degree in Migration Law and specialize in assisting foreign nationals with visas, residence permits, naturalization, and immigration regularization in Brazil. I also assist Brazilians seeking legal guidance in Brazil and abroad. I provide legal representation throughout every stage of the immigration process, from initial planning to final approval.",
       paragraph2: "I specialize in Civil Procedure and Social Security Law, with extensive experience in legal consulting and in conducting administrative and judicial proceedings. My work is guided by ethics, personalized service, and the pursuit of reliable, human-centered legal solutions. I am committed to providing accessible legal assistance to individuals of different nationalities, while valuing intercultural dialogue and respect for human rights.",
-      years: "15+ Years",
+      years: "{{years}}+ Years",
       experience: "of Experience",
       specialization: "Specialization",
       postgraduate: "Postgraduate",
