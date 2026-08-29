@@ -19,9 +19,9 @@ export const translations = {
     },
     about: {
       title: "Sobre mim",
-      paragraph1: "Advogada inscrita na OAB/SC sob nº 25.949, com mais de 15 anos de experiência na advocacia. Pós-graduada em Direito Migratório, atuo de forma especializada auxiliando estrangeiros em processos de residência, naturalização, vistos e regularização migratória no Brasil, além de brasileiros que necessitem de orientação jurídica no Brasil e no exterior.",
+      paragraph1: "Advogada inscrita na OAB/SC sob nº 25.949, com mais de {{years}} anos de experiência na advocacia. Pós-graduada em Direito Migratório, atuo de forma especializada auxiliando estrangeiros em processos de residência, naturalização, vistos e regularização migratória no Brasil, além de brasileiros que necessitem de orientação jurídica no Brasil e no exterior.",
       paragraph2: "Possuo também especializações em Processo Civil e Direito Previdenciário, com ampla experiência em consultoria jurídica e no acompanhamento de processos administrativos e judiciais. Meu trabalho é guiado pela ética, pelo atendimento personalizado e pela busca de soluções jurídicas seguras e humanizadas, oferecendo um serviço acessível a pessoas de diferentes nacionalidades, com valorização do diálogo intercultural e do respeito aos direitos humanos.",
-      years: "15+ Anos",
+      years: "{{years}}+ Anos",
       experience: "de Experiência",
       specialization: "Especialização",
       postgraduate: "Pós-Graduada",
