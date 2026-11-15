@@ -15,7 +15,7 @@ export const translations = {
       subtitle: "Advocacia especializada em Direito Migratório, Direito Previdenciário, Processo Civil e Direito do Consumidor, com atendimento humanizado e soluções jurídicas eficazes.",
       scheduleConsultation: "Agende uma Consulta",
       learnMore: "Conheça mais",
-      whatsappMessage: "Olá, gostaria de agendar uma consulta",
+      whatsappMessage: "Olá! Gostaria de tirar algumas dúvidas. Poderia me ajudar?",
     },
     about: {
       title: "Sobre mim",
@@ -156,7 +156,7 @@ export const translations = {
       subtitle: "A law practice specializing in Brazilian Immigration Law, offering human-centered legal services and effective solutions for individuals and families, with additional expertise in Social Security Law, Civil Procedure, and Consumer Law.",
       scheduleConsultation: "Schedule a Consultation",
       learnMore: "Learn More",
-      whatsappMessage: "Hello, I would like to schedule a consultation",
+      whatsappMessage: "Hello! I have a few questions. Could you help me?",
     },
     about: {
       title: "About Me",
@@ -297,7 +297,7 @@ export const translations = {
       subtitle: "Despacho de abogacía especializado en Derecho Migratorio, Derecho de la Seguridad Social, Derecho Procesal Civil y Derecho del Consumidor, con atención humanizada y soluciones jurídicas eficaces.",
       scheduleConsultation: "Agendar una Consulta",
       learnMore: "Conocer más",
-      whatsappMessage: "Hola, me gustaría agendar una consulta",
+      whatsappMessage: "¡Hola! Quisiera aclarar algunas dudas. ¿Podría ayudarme?",
     },
     about: {
       title: "Sobre mí",
